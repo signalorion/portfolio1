@@ -1,0 +1,44 @@
+@charset "utf-8";
+/*그리드 뷰*/
+
+
+.grid{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /*가로중앙이동*/
+    width: 960px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    z-index: 777;
+    opacity: 0.5;
+    display: none;
+    /*필요할 때 껐다 켰다 하셈*/
+    max-width: 100%;
+}
+
+/*grid float 해제*/
+.grid::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/*li 설정*/
+.grid li{
+    float: left;
+    /*옆으로 흐르게*/
+    width: 8.333%;
+    /*12등분*/
+    height: 100%;
+    background-color: #10b5dd;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background-clip: content-box;
+    
+    /*background-origin은 배경이미지 영역설정 속성*/
+}
+

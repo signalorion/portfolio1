@@ -1,0 +1,196 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+/*font-family: 'Six Caps', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+
+/*font-family: 'Noto Serif KR', serif;*/
+@font-face {
+    font-family: oranien;
+    src: url(../fonts/Oranienbaum.ttf) format("truetype");
+    src: url(../fonts/Oranienbaum.woff) format("woff")
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+ul::after,
+ol::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*기본적 ul ol 설정은 이렇게 해줘야한다*/
+
+li {
+    float: left;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+.ir {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/*사진설명문구*/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Noto Serif KR', serif;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    outline: 2px dotted red;
+    /*overflow: hidden;*/
+}
+
+.inbox {
+    width: 1280px;
+    max-width: 100%;
+    /*1280보다 작을땐 벽에 붙게!*/
+    height: 100%;
+    margin: 0 auto;
+    /*background-color: aqua;*/
+}
+
+.back2main {
+    position: fixed;
+    top: 2%;
+    right: 5%;
+    font-family: oranien;
+    font-size: 19px;
+    color: #1a1a1a;
+}
+
+.back2main img {
+    width: 20px;
+    margin-right: 10px;
+    vertical-align: -5px;
+}
+
+/*뉴스타이틀*/
+.newstitle {
+    font-size: 45px;
+    color: #fff;
+    margin-left: 5%;
+    height: 16%;
+}
+
+/*뉴스내용*/
+
+
+.newslist {
+    width: 100%;
+    height: 81%;
+}
+
+.newslist_ul {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding-top:3%;
+}
+  .newslist_ul::-webkit-scrollbar {
+    width: 12px;
+    background-color: white;
+  }
+  .newslist_ul::-webkit-scrollbar-thumb {
+    background-color: #2f3542;
+      
+  }
+  .newslist_ul::-webkit-scrollbar-track {
+    background-color: white;
+  }
+
+.newslist_ul li {
+    width: 38%;
+    background: white;
+    margin: 0 5%;
+    margin-bottom: 5%;
+}
+
+.newslist_ul li:nth-child(2n) {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.newslist_ul h4 {
+    color: #ae1723;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    font-weight: 200;
+}
+
+.newsimg {
+    width: 100%;
+    height: 450px;
+}
+
+.newsimg.no1 {
+    background: url(../images/apple/Apple_2.jpg) no-repeat center/cover;
+}
+
+.newsimg.no2 {
+    background: url(../images/yangyang.jpg) no-repeat top/cover;
+}
+
+.newsimg.no3 {
+    background: url(../images/winner.jpg) no-repeat top/cover;
+}
+
+.newsimg.no4 {
+    background: url(../images/news3.jpg) no-repeat top/cover;
+}
+
+.newsimg.no5 {
+    background: url(../images/news4.jpg) no-repeat top/cover;
+}
+
+.newsimg.no6 {
+    background: url(../images/news.5.JPG) no-repeat top/cover;
+}
+
+
+
+/*푸터*/
+.info {
+    text-align: center;
+    color: #969696;
+    font-size: 11px;
+    line-height: 20px;
+}

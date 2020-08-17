@@ -1,0 +1,673 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+/*font-family: 'Six Caps', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700;900&display=swap');
+/*font-family: 'Noto Serif KR', serif;*/
+@font-face {
+  font-family: oranien;
+  src: url(../fonts/Oranienbaum.ttf) format("truetype")
+}
+
+.bgBlur:before {
+
+  content: '';
+
+  position: absolute;
+
+  top: 0; left:0; right:0; bottom:0;
+
+  background: inherit;
+
+  z-index:-1;
+
+  filter: blur(6px); 
+
+  -webkit-filter: blur(6px); 
+
+  -moz-filter: blur(6px);
+
+  -o-filter: blur(6px);
+
+  filter:url(#blur);
+
+}
+/*https://feeva.github.io/posts/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%9D%98-%EA%B0%80%EB%A1%9C%EC%84%B8%EB%A1%9C%EB%B9%84%EB%A5%BC-%EC%9C%A0%EC%A7%80%ED%95%98%EB%A9%B4%EC%84%9C-%ED%8B%80-%EC%95%88%EC%97%90-%EB%A7%9E%EC%B6%94%EB%A0%A4*/
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+ul::after,
+ol::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*기본적 ul ol 설정은 이렇게 해줘야한다*/
+
+li {
+    float: left;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+.ir {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/*사진설명문구*/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+   /* overflow: hidden;*/ /*스크롤 드르륵을 위해서*/
+}
+
+body {
+    font-family: 'Noto Serif KR', serif;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    outline: 2px dotted red;
+}
+
+.inbox {
+    width: 1280px;
+    max-width: 100%;
+    /*1280보다 작을땐 벽에 붙게!*/
+    height: 100%;
+    margin: 0 auto;
+}
+
+/***************************************************1. 메인페이지*/
+#cont1 {
+    background: rgb(226, 242, 255);
+    background: -moz-linear-gradient(left, rgba(226, 242, 255, 1) 0%, rgba(183, 207, 253, 1) 100%);
+    background: -webkit-linear-gradient(left, rgba(226, 242, 255, 1) 0%, rgba(183, 207, 253, 1) 100%);
+    background: linear-gradient(to right, rgba(226, 242, 255, 1) 0%, rgba(183, 207, 253, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e2f2ff', endColorstr='#b7cffd', GradientType=1);
+}
+
+
+.cont1 {
+    background: url(../images/aboutmembers.jpg) no-repeat center/cover;
+    
+}
+
+.cont1_title {
+    color: #ae1723;
+    font-size: 55px;
+    font-family: oranien;
+    padding:0 5%;
+    position: relative;
+    display: inline-block;
+}
+
+.cont1_menu{
+    font-family: oranien;
+   color: #ae1723;
+    font-size: 32px;
+    position: absolute;
+    top: 61%;
+    right: -33%;
+}
+.cont1_menu li{margin-right: 15px; float: none;}
+.cont1_menu li:hover a{color:white;}
+
+.back2main{position: fixed; top: 2%; right: 5%;font-family: oranien; font-size: 19px; color:#1a1a1a; z-index: 500;}
+.back2main img{width: 20px; margin-right: 10px; vertical-align: -5px;}
+
+/***********************************************2. 멤버소개페이지*/
+.cont2_title{padding:10px 25px; color: #ae1723; font-weight: bold;}
+.cont2_title h2{font-size: 33px;}
+
+.cont2_title h5{font-size: 13px; font-weight: 400;}
+
+.cont2_ban {
+    position: relative;
+    width: 100%;
+    background:url(../images/apple/Apple_1.jpg) no-repeat 0/contain;
+    
+}
+.cont2_ban img{position: absolute; width: auto; height: 100%;}
+
+.c2h2 {
+    height: 60%;
+}
+
+#cont2_sns {
+    display: flex;
+    align-items: flex-end;
+}
+
+.cont2_sns {
+    display: flex;
+}
+.cont2_sns a{
+    display: block;
+}
+
+.cont2_sns li img {
+    width: 50%;
+}
+
+.cont2_sns li {
+    text-align: right;
+}
+
+#cont2_memberpro {
+    width: 1280px;
+    max-width: 100%;
+    position: relative;
+}
+
+.cont2_memberpro h6 {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+
+.cont2_memberpro li {
+    width: 16%;
+    margin-right: 0.8%;
+    margin-top: 3%;
+}
+
+.cont2_memberpro li:last-child {
+    margin-right: 0;
+}
+
+.cont2_memberpro li:hover{
+    cursor: pointer;
+}
+
+
+.cont2_memberpro li img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/*멤버사진클릭시*/
+
+.member_info {
+    width: 100%;
+    height: 75%;
+    background-color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 60px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.memberinfo_box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.proclose {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+}
+
+.member_proimg {
+    width: 500px;
+    /*비율유지 못해먹겠다*/
+}
+.member_proimg::after{
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.member_text {
+    color: white;
+    width: calc(100% - 650px);
+    /*border: 1px solid blue;*/
+    padding-top: 10%;
+    padding-left: 5%;
+}
+
+.member_text h4 {
+    font-size: 35px;
+    margin-bottom: 45px;
+    position: relative;
+    font-weight: 500;
+}
+
+.member_text h4::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0; right: 0;
+    height: 2px;
+    background-color: white;
+}
+
+
+.member_text b {
+    font-family: oranien;
+    font-weight: 100;
+}
+
+.member_text div{padding-bottom: 10px;}
+
+/*기본설정*/
+.member_info{display: none;}
+/*버튼눌렀을때 나오게하기*/
+
+/*멤버별*/
+.prosowon {
+    background: url(../images/apple/Apple_sowon2.jpg) no-repeat center/cover;
+}
+
+.proyerin {
+    background: url(../images/apple/Apple_yr1.jpg) no-repeat center/cover;
+}
+
+.proeunha {
+    background: url(../images/apple/Apple_eh1.jpg) no-repeat center/cover;
+}
+
+.proyuju {
+    background: url(../images/apple/Apple_yj1.jpg) no-repeat center/cover;
+}
+
+.prosinb {
+    background: url(../images/apple/Apple_sb2.jpg) no-repeat center/190%;
+}
+
+.proumji {
+    background: url(../images/apple/Apple_uj2.jpg) no-repeat center/190%;
+}
+
+/**************************************************3. 디스코그라피*/
+.cont3 {
+    height: 100%;
+}
+
+.cont3_title{padding:10px; height: 6%; font-family: oranien;}
+.cont3_title h2{font-size: 33px; color:#ae1723;}
+
+.discograp {
+    width: 100%;
+    height: 90%;
+    overflow-y: scroll;
+}
+.discograp h5{
+    font-size: 23px;
+}
+
+.discograp ul {
+    width: 100%;
+}
+
+.discograp ul li {
+    width: 30%;
+    margin-right: 4%;
+    position: relative;
+}
+
+.discograp ul li::after {
+    content: '';
+    display: block;
+    padding-top: 100%;
+}
+
+.discograp ul li:last-child {
+    margin-right: 0;
+}
+
+/*호버시*/
+.albumimg_hover{display: none;}
+
+.discograp ul li{position: relative;}
+
+.albumimg_hover{position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.50); color:white; font-size: 20px; display: flex;justify-content: center; align-items: center; font-family: oranien;} 
+
+
+.albumimg_13 {
+    background: url(../images/albumimg/13.png)no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.albumimg_12 {
+    background: url(../images/albumimg/12.jpg)no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.albumimg_11 {
+    background: url(../images/albumimg/11.jpg)no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.albumimg_10 {
+    background: url(../images/albumimg/10.jpg)no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.albumimg_9 {
+    background: url(../images/albumimg/9.jpg)no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.albumimg_8 {
+    background: url(../images/albumimg/8.jpg)no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.albumimg_7 {
+    background: url(../images/albumimg/7.jpg)no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.albumimg_6 {
+    background: url(../images/albumimg/6.jpg)no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.albumimg_5 {
+    background: url(../images/albumimg/5.jpg)no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.albumimg_4 {
+    background: url(../images/albumimg/4.jpg)no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.albumimg_3 {
+    background: url(../images/albumimg/3.jpg)no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.albumimg_2 {
+    background: url(../images/albumimg/2.jpg)no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.albumimg_1 {
+    background: url(../images/albumimg/1.jpg)no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+
+
+/*****************앨범 눌렀을시*/
+#cont3 {
+    position: relative;
+}
+
+.albumdetail{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+    z-index: 1;*/
+}
+.albumdetail.no13{
+    background: url(../images/albumimg/13.png) no-repeat center/190%;
+     
+}
+.albumdetail.no12{
+    background: url(../images/albumimg/12.jpg) no-repeat center/190%;
+}
+.albumdetail.no11{
+    background: url(../images/albumimg/11.jpg) no-repeat center/190%;
+}
+.albumdetail.no10{
+    background: url(../images/albumimg/10.jpg) no-repeat center/190%;
+}
+.albumdetail.no9{
+    background: url(../images/albumimg/9.jpg) no-repeat center/190%;
+}
+.albumdetail.no8{
+    background: url(../images/albumimg/8.jpg) no-repeat center/190%;
+}
+.albumdetail.no7{
+    background: url(../images/albumimg/7.jpg) no-repeat center/190%;
+}
+.albumdetail.no6{
+    background: url(../images/albumimg/6.jpg) no-repeat center/190%;
+}
+.albumdetail.no5{
+    background: url(../images/albumimg/5.jpg) no-repeat center/190%;
+}
+.albumdetail.no4{
+    background: url(../images/albumimg/4.jpg) no-repeat center/190%;
+}
+.albumdetail.no3{
+    background: url(../images/albumimg/3.jpg) no-repeat center/190%;
+}
+.albumdetail.no2{
+    background: url(../images/albumimg/2.jpg) no-repeat center/190%;
+}
+.albumdetail.no1{
+    background: url(../images/albumimg/1.jpg) no-repeat center/190%;
+}
+
+
+.albuminfo {
+    position: relative;
+    width: 1280px;
+    max-width: 100%;
+    margin: 0 auto;
+    
+}
+
+.detail_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.detail_close img {
+    width: 45px;
+}
+
+
+.albuminfo_main {
+    overflow: hidden;
+    padding: 30px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.albuminfo_img {
+    float: left;
+    width: 40%;
+    position: relative;
+}
+
+.albuminfo_img::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+/*트랙리스트*/
+#album_track {
+    width: 58%;
+    float: right;
+}
+
+.album_track {
+    width: 100%;
+    height: 100%;
+    padding-left: 60px;
+    box-sizing: border-box;
+    padding-top: 25px;
+}
+
+.album_track h4 {
+    color: #444;
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.tracklist_ul {
+    color: #282828;
+    width: 100%;
+    font-size: 20px;
+}
+
+.tracklist_ul li {
+    float: none;
+    width: 70%;
+    position: relative;
+    line-height: 45px;
+    text-shadow: 1px 1px 1px rgba(26, 26, 26, 0.65);
+}
+
+.tracklist_ul li span {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.tracklist_ul li {
+    text-align: right;
+}
+
+
+/*앨범소개란*/
+.albumtext_box {
+    width: 1280px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.albumtext_box {
+    color: white;
+}
+
+.albumtexttitle h4 {
+    font-size: 40px;
+    padding: 0px 0 15px 0;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.7);
+}
+
+.albumtexttitle small {
+    margin-right: 10px;
+}
+
+.albumtextinfo {
+    line-height: 1.7;
+}
+
+/*앨범클릭 기본설정*/
+.albumdetail {display: none;}
+
+
+/*푸터*/
+.info{text-align: center; color:#969696; font-size: 11px; line-height: 25px; height: 1%;}

@@ -1,0 +1,747 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+/*font-family: 'Six Caps', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600&display=swap');
+
+/*font-family: 'Noto Serif KR', serif;*/
+@font-face {
+    font-family: oranien;
+    src: url(../fonts/Oranienbaum.ttf) format("truetype")
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+ul::after,
+ol::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*기본적 ul ol 설정은 이렇게 해줘야한다*/
+
+li {
+    float: left;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+    
+}
+
+.ir {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/*사진설명문구*/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Noto Serif KR', serif;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    outline: 2px dotted red;
+}
+
+.inbox {
+    width: 1280px;
+    max-width: 100%;
+    /*1280보다 작을땐 벽에 붙게!*/
+    height: 100%;
+    margin: 0 auto;
+}
+
+.inbox2 {
+    width: 1800px;
+    max-width: 100%;
+    /*1800보다 작을땐 벽에 붙게!*/
+    height: 100%;
+    margin: 0 auto;
+}
+
+.inbox3 {
+    width: 1500px;
+    max-width: 100%;
+    /*1800보다 작을땐 벽에 붙게!*/
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+.c2h1 {
+    height: calc(100% - 130px);
+
+}
+
+.c2h2 {
+    height: 130px;
+}
+
+.c3h1 {
+    height: 100px;
+}
+
+.c3h2 {
+    height: calc(100% - 180px);
+}
+
+.c3h3 {
+    height: 80px;
+}
+
+/*************************************1. 인트로영역*/
+/*화면작아질때 글씨크기의 문제를 해결해야한다!! ->해결 : white-space 노랩을 줘야함*/
+#cont1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    white-space: nowrap;
+}
+
+#teaservideo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /*    object-fit: cover; 비디오가 잘려보이니까*/
+}
+
+#introtitle {
+    position: absolute;
+    color: white;
+    font-family: 'Six Caps', sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 110px;
+    text-align: center;
+    font-weight: 100;
+}
+
+.titlehanza {
+    font-family: 'Noto Serif KR', serif;
+}
+
+.nextpage {
+    position: absolute;
+    bottom: 20px;
+    left: 48%;
+}
+
+.nextpage img {
+    width: 35%;
+}
+
+/*************************************2. 메인 페이지*/
+.cont2 {
+    background-color: black;
+}
+
+.cont2 h3 {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 20px;
+}
+
+.cont2 h3:hover {
+    color: white;
+    transition: all, .5s
+}
+
+/*계속 반복해서 깜빡깜빡 하게하고싶다*/
+
+.c2h1 {
+    position: relative;
+    overflow: hidden;
+}
+
+.c2h2 {
+    text-align: center;
+    line-height: 130px;
+}
+
+.mainlinks a {
+    margin-right: 10px;
+}
+
+.mainlinks a:hover {
+    color: white;
+    transition: color, .6s
+}
+
+.mainmenu {
+    font-size: 20px;
+    max-width: 1280px;
+    float: none;
+    margin: 0 auto;
+}
+
+.mainlistlogo a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*비디오타이틀*/
+
+.videotitle {
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+}
+
+.videotitle_title {
+    display: block;
+}
+
+#cont2 {
+    font-family: oranien;
+}
+
+.videotitle a {
+    color: rgba(255, 255, 255, 0.70);
+}
+
+#movie {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -60px;
+}
+
+.main_source_logo {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/***********************************3. 앨범컨셉 사진영역*/
+/*브로큰 룸*/
+.cont3 {
+    overflow: hidden;
+}
+
+/*버튼 눌렀을 때 사진 바껴야하니까*/
+
+.brkroom {
+    background-color: #d2d5ce;
+}
+
+.conceptphoto {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide1 {
+    position: absolute;
+    left: 0;
+    width: 600%;
+    height: 100%;
+}
+
+/*사진이 6장이라 600퍼*/
+.slide1 li {
+    width: 16.666%;
+    height: 100%;
+
+}
+
+.slide1 > li.s1 {
+    background: url(../images/brkroom/Broken_Room_11.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide1 > li.s2 {
+    background: url(../images/brkroom/Broken_Room_22.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide1 > li.s3 {
+    background: url(../images/brkroom/Broken_Room_3.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide1 > li.s4 {
+    background: url(../images/brkroom/Broken_Room_4.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide1 > li.s5 {
+    background: url(../images/brkroom/Broken_Room_1.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide1 > li.s6 {
+    background: url(../images/brkroom/Broken_Room_2.jpg) no-repeat center;
+    background-size: contain;
+}
+
+/*이동버튼*/
+.img_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+#concepttitle {
+    text-align: center;
+    padding-top: 10px;
+}
+
+#concepttitle img {
+    height: 85px;
+}
+
+.concept_ver li {
+    float: left;
+    width: 214px;
+    text-align: center;
+    line-height: 80px;
+    position: relative;
+}
+.concept_ver img{padding:6%; width:25%;}
+
+.concept_ver li::after{display: none;}
+.concept_ver li::after {
+    content: "";
+    width: 50%;
+    overflow: hidden;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    /*on상태 아닌 애들한테만 주고싶은데*/
+}
+
+/*.concept_ver li:hover .concept_ver li::after{
+    width:50%;
+}*/
+
+/*.concept_ver li:hover {
+    text-decoration: line-through;
+    font-size: 18px;
+    transition: text-decoration, .7s;
+}*/
+
+/*.concept_ver .on {
+    font-size: 18px;
+    text-decoration: line-through;
+
+}*/
+.concept_ver li:last-child::after{width: 0;}
+
+#concept_ver {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+}
+
+/*틸티드*/
+.tilted {
+    background-color: #c1ccd0;
+}
+
+#menubox {
+    position: relative;
+}
+
+.menubtn {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 50px;
+    cursor: pointer;
+    z-index: 444;
+}
+
+.slide2 {
+    position: absolute;
+    left: 0;
+    width: 900%;
+    height: 100%;
+}
+
+/*사진이 6장이라 600퍼*/
+.slide2 li {
+    width: 11.111%;
+    height: 100%;
+}
+
+.slide2 > li.s1 {
+    background: url(../images/tilted/Tilted_2.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide2 > li.s2 {
+    background: url(../images/tilted/Tilted_3.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide2 > li.s3 {
+    background: url(../images/tilted/Tilted_1.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide2 > li.s4 {
+    background: url(../images/tilted/Tilted_4.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide2 > li.s5 {
+    background: url(../images/tilted/Tilted_5.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide2 > li.s6 {
+    background: url(../images/tilted/Tilted_6.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide2 > li.s7 {
+    background: url(../images/tilted/Tilted_7.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide2 > li.s8 {
+    background: url(../images/tilted/Tilted_8.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide2 > li.s9 {
+    background: url(../images/tilted/Tilted_9.jpg) no-repeat center;
+}
+
+/*메뉴호버시*/
+
+
+
+.menu_hover {
+    position: absolute;
+    font-family: oranien;
+    width: 0%;
+    overflow: hidden;
+    height: 44px;
+    top: 8%;
+    right: 2%;
+    /*background-color: aquamarine;*/
+}
+
+.menu_hover a {
+    color: #969696;
+    text-align: center;
+}
+
+.menu_hover li {
+    line-height: 44px;
+    width: 25%;
+    text-align: center;
+    font-size: 19px;
+}
+
+.menu_hover li:hover {
+    text-shadow: 1px 1px 2px #000;
+    background-color: rgba(255, 255, 255, 0.32);
+}
+
+
+
+/*애플*/
+.apple {
+    background-color: #cbc9d4;
+}
+
+#menubox2 {
+    position: relative;
+}
+
+#menubox2 img {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 50px;
+    cursor: pointer;
+}
+
+.slide3 {
+    position: absolute;
+    left: 0;
+    width: 800%;
+    height: 100%;
+}
+
+/*사진이 6장이라 600퍼*/
+.slide3 li {
+    width: 12.5%;
+    height: 100%;
+}
+
+.slide3 > li.s1 {
+    background: url(../images/apple/Apple_1.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide3 > li.s2 {
+    background: url(../images/apple/Apple_2.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide3 > li.s3 {
+    background: url(../images/apple/Apple_3.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide3 > li.s4 {
+    background: url(../images/apple/Apple_4.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide3 > li.s5 {
+    background: url(../images/apple/Apple_5.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide3 > li.s6 {
+    background: url(../images/apple/Apple_6.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide3 > li.s7 {
+    background: url(../images/apple/Apple_7.jpg) no-repeat center;
+    background-size: contain;
+}
+
+.slide3 > li.s8 {
+    background: url(../images/apple/Apple_8.jpg) no-repeat center;
+    background-size: contain;
+}
+
+
+
+/**************************************4. 앨범소개영역*/
+.cont4 {
+    background: url(../images/newalbum_bg.jpg) no-repeat center/cover;
+}
+
+.c4h0 {
+    height: 73px;
+}
+
+.c4h1 {
+    height: calc(100% - 448px);
+}
+
+.c4h2 {
+    height: 375px;
+}
+
+#menubox3 img {
+    width: 50px;
+    position: absolute;
+    top: 5px;
+    right: 0;
+}
+
+#menubox3 {
+    position: relative;
+    max-width: 1280px;
+    margin: 0 auto;
+    float: none;
+    /*기존float해제해야 중앙정렬됨!*/
+}
+
+.cont4albumimg_box {
+    padding: 15px;
+}
+
+.cont4albumimg {
+    background: url(../images/albumimg/13.png) no-repeat center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}
+
+
+.this_albumintro b {
+    display: block;
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.this_albumintro {
+    padding-top: 15px;
+    padding-left: 15px;
+    color: #333;
+}
+
+.this_intro1 {
+    line-height: 25px;
+}
+
+.this_intro2 {
+    margin-top: 10px;
+    line-height: 25px;
+}
+
+.cont4texts {
+    position: relative;
+}
+
+.this_links {
+    position: absolute;
+    bottom: 30px;
+}
+
+.this_links li {
+    margin-right: 20px;
+    text-shadow: 1px 1px 8px #fff;
+}
+
+.this_links li:hover a {
+    color: white;
+    transition: .6s;
+}
+
+#cont4_tracklist {
+    padding: 20px 20px 0 20px;
+}
+
+#cont4_tracklist h2 {
+    font-size: 45px;
+    font-family: oranien;
+    padding-left: 10%;
+}
+
+.tracklist_ul {
+        width: 92%;
+    padding-left: 10%;
+    color: #333;
+}
+
+.tracklist_ul li {
+    float: none;
+    position: relative;
+    padding: 10px 0;
+    font-size: 18px;
+    line-height: 18px;
+    padding-left: 25px;
+}
+
+.tracklist_ul > li img {
+    position: absolute;
+    top: 8px;
+    right: 30px;
+}
+
+.tracklist_ul > li small {
+    font-size: 13px;
+    color: #ae1723;
+    position: absolute;
+    top: 13px;
+    left: -10px;
+}
+
+.tracklist_ul > li b {
+    font-size: 13px;
+    color: #5a5a5a;
+    margin-left: 10px;
+}
+
+/*각 곡 설명*/
+.track_plus {}
+
+.trackintro {
+    display: none;
+    padding: 10px 3%;
+    line-height: 1.5;
+
+}
+
+.info {
+    text-align: center;
+    color: #969696;
+    font-size: 11px;
+}
+
+.up_arrow {
+    position: relative;
+    text-align: center;
+}
+
+.up_arrow span {
+    display: block;
+    font-size: 14px;
+    color: #e2e2e2;
+}
+
+.up_arrow a {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    text-shadow: 1px 1px 2px #000;
+}
+.up_arrow img{filter: drop-shadow( 1px 1px 2px #000);}
+
+/*곡 설명 스크롤관련*/
+#cont4_tracklist {
+    overflow-y: scroll;
+}
+
+#cont4_tracklist::-webkit-scrollbar {
+    display: none;
+}
+
+#cont4_tracklist {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.trackintro::-webkit-scrollbar {
+    display: none;
+}
