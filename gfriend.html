@@ -6,153 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GFRIEND [回:Song fo the Sirens]</title>
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="css/GFR_media.css">
     <link rel="stylesheet" href="css/gridSetting.css">
     <link rel="stylesheet" href="css/gridView.css">
     <script src="js/jquery-3.5.1.min.js"></script>
-    <script>
-        $(function() {
-            $(".mainlistlogo").hover(function(){$("img",this).fadeOut(500)},function(){$("img",this).fadeIn(900)});
-            
-            $(".brkroom .img_arrow.right").click(function() {
-                $(".slide1").css({
-                    left: "-=100%"
-                    /*왜 트랜지션을 주면 안 먹을까...?*/
-                });
-                
-            });
-
-            $(".tilted .img_arrow.right").click(function() {
-                $(".slide2").css({
-                    left: "-=100%"
-                });
-            });
-
-            $(".apple .img_arrow.right").click(function() {
-                $(".slide3").css({
-                    left: "-=100%"
-                });
-            });
-
-            $(".brkroom .img_arrow.left").click(function() {
-                $(".slide1").css({
-                    left: "+=100%"
-                });
-            });
-            $(".tilted .img_arrow.left").click(function() {
-                $(".slide2").css({
-                    left: "+=100%"
-                });
-            });
-            $(".apple .img_arrow.left").click(function() {
-                $(".slide3").css({
-                    left: "+=100%"
-                    
-                });
-            });/////////슬라이드설정/////////////////
-            
-            $(".track_plus").click(function(){
-                //화살표 돌아가는거 하고싶다
-                $(this).next().slideToggle(function(){});
-                
-                /*$("img",this).css({transform: 'rotate(-45deg)', transition:"all .6s"});*/
-                
-                $(".tracklist_tit.no1").css({
-                    fontWeight:"bold"
-                });
-            });
-            $(".track_plus.no2").click(function(){
-                
-                $(".tracklist_tit.no2").css({
-                    fontWeight:"bold"
-                });
-            });
-            $(".track_plus.no3").click(function(){
-                
-                $(".tracklist_tit.no3").css({
-                    fontWeight:"bold"
-                });
-            });
-            $(".track_plus.no4").click(function(){
-                
-                $(".tracklist_tit.no4").css({
-                    fontWeight:"bold"
-                });
-            });
-            $(".track_plus.no5").click(function(){
-                
-                $(".tracklist_tit.no5").css({
-                    fontWeight:"bold"
-                });
-            });
-            $(".track_plus.no6").click(function(){
-               
-                $(".tracklist_tit.no6").css({
-                    fontWeight:"bold"
-                });
-            });////////신곡소개///////////////
-            
-            $(".menubtn").mouseenter(function(){
-                /*width 55퍼로 늘리기*/
-                $(".menu_hover").css({
-                    width:"55%",
-                    transition:"all, .8s"
-                });
-            });
-            $(".menubtn").mouseout(function(){
-                /*width 55퍼로 늘리기*/
-                $(".menu_hover").css({
-                    width:"0%",
-                    transition:"all, .8s"
-                });
-            });////////메뉴버튼 설정///////////가만히좀있게못하나....
-            
-            //페이지 스르륵 내려가기//////////////////////////////////
-            $(".nextpage a, #cont1 a, .mainlistlogo a").click(function(e){
-                e.preventDefault();
-                
-                var pid=$(this).attr("href");
-                console.log(pid);
-                
-                var ptop=$(pid).offset().top;
-                
-                $("html, body").animate({
-                    scrollTop: ptop+"px"
-                },800);
-            });////////////로딩화면 화살표 클릭시///////////////
-            
-            $(".concept_ver li a, .up_arrow a").click(function(e){
-                e.preventDefault();
-                
-                var pid=$(this).attr("href");
-                console.log(pid);
-                
-                var ptop=$(pid).offset().top;
-                
-                $("html, body").animate({
-                    scrollTop: ptop+"px"
-                },800);
-            });//////////////콘셉이름 클릭시////////////
-            
-            $(".mainlinks .mainviewinfo").click(function(e){
-                e.preventDefault();
-                
-                var pid=$(this).attr("href");
-                console.log(pid);
-                
-                var ptop=$(pid).offset().top; 
-                
-                $("html, body").animate({
-                    scrollTop: ptop+"px"
-                },900);
-            });//////////////메인메뉴 클릭시////////////
-            
-            
-                
-                        
-            
-        }); //////////제이쿼리로딩//////////////////
-
-    </script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/gfriend.js"></script>
     <style>
         .grid {
             width: 1280px;
@@ -167,7 +26,9 @@
         <section id="cont1" class="inbox clb">
             <a href="#cont2">
                 <!--클릭하거나 스크롤 내렸을 시 2. 메인페이지로 스르륵 내려가기-->
-                <video src="images/teaser.webm" id="teaservideo" autoplay muted loop></video>
+                <!--<video src="images/teaser.webm" id="teaservideo" autoplay muted loop></video>-->
+                <!--모바일에선 유튭동영상 자동재생 안된다!!!!!!!!!!!!!!! 언능 영상편집을 배워서 용량을 줄인 영상을 삽입해야겠다...-->
+                <iframe id="teaservideo" width="100%" height="100%" src="https://www.youtube.com/embed/kcOZ6PJ-M-c?autoplay=1&mute=1&start=10&end=128&iv_load_policy=3&showinfo=0&controls=0&rel=0&loop=1;playlist=kcOZ6PJ-M-c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><!--루프가 잘 되는지 모르겠다..-->
                 <div id="introtitle">
                     <h1>GFRIEND 9TH MINI ALBUM<br>
                         [<span class="titlehanza">回:</span> Song of the Sirens]<br>
@@ -182,12 +43,15 @@
     <div class="page cont2"  id="cont2">
         <section class="inbox3 clb">
             <div class="col-12 c2h1">
-                <video src="images/movie.webm" id="movie" autoplay muted loop></video>
+                <!--<video src="images/movie.webm" id="movie" autoplay muted loop></video>-->
+                <iframe id="movie" width="100%" height="100%" src="https://www.youtube.com/embed/XQSse3b2ge4?autoplay=1&mute=1&start=5&end=205&iv_load_policy=3&showinfo=0&controls=0&rel=0&loop=1;playlist=XQSse3b2ge4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div class="videotitle">
-                    <img src="images/gfriend_this_title_white.png" class="videotitle_title" alt="이번앨범 타이틀">
-                    <img src="images/videotitle_name_white.png" class="videotitle_name" alt="여자친구">
-                    <span class="mainlinks"><a target=_blank href="https://youtu.be/XQSse3b2ge4">WATCH MUSIC VIDEO</a>
-                        <a class="mainviewinfo" href="#cont4">VIEW ALBUM INFORMATION</a></span>
+                    <div class="videotit_box">
+                        <img src="images/gfriend_this_title_white.png" class="videotitle_title" alt="이번앨범 타이틀">
+                        <img src="images/videotitle_name_white.png" class="videotitle_name" alt="여자친구">
+                        <span class="mainlinks"><a target=_blank href="https://youtu.be/XQSse3b2ge4">WATCH MUSIC VIDEO</a>
+                            <a class="mainviewinfo" href="#cont4">VIEW ALBUM INFORMATION</a></span>
+                    </div>
                 </div>
                 <div class="main_source_logo"><img src="images/source_logo_white.png"></div>
             </div>
@@ -219,7 +83,7 @@
 
             <div class="col-12 c3h2 conceptphoto">
 
-                <ul class="slide1">
+                <ul class="slide1 ">
                     <li class="s1"><span class="ir">사진이미지</span></li>
                     <li class="s2"><span class="ir">사진이미지</span></li>
                     <li class="s3"><span class="ir">사진이미지</span></li>
@@ -236,10 +100,10 @@
 
             <div class="col-12 c3h3" id="concept_ver">
                 <ul class="concept_ver">
-                    <li class="on"><a href="#brkroom">Broken Room</a></li>
-                    <li><a href="#tilted">Tilted</a></li>
-                    <li><a href="#apple">Apple</a></li>
-                    <li><a href="#intro_sos"><img src="images/gfriend_logo_small_black.png"></a></li>
+                    <li class="on underline"><a href="#brkroom">Broken Room</a></li>
+                    <li class="underline"><a href="#tilted">Tilted</a></li>
+                    <li class="underline"><a href="#apple">Apple</a></li>
+                    <li class="underline"><a href="#intro_sos"><img src="images/gfriend_logo_small_black.png"></a></li>
                 </ul>
             </div>
         </section>
@@ -252,7 +116,6 @@
             <div class="col-12 c3h1" id="menubox"><img src="images/menu.png" alt="메뉴이동" class="menubtn"><div class="menu_hover">
                     <ul class="menu_hover_ul">
                         <li><a href="#">MAIN</a></li>
-                        <li><a href="#">SOURCE MUSIC</a></li>
                         <li><a href="#">GFRIEND</a></li>
                         <li><a href="#">NEWS</a></li>
                     </ul>
@@ -275,10 +138,10 @@
             </div>
             <div class="col-12 c3h3" id="concept_ver">
                 <ul class="concept_ver">
-                    <li><a href="#brkroom">Broken Room</a></li>
-                    <li class="on"><a href="#tilted">Tilted</a></li>
-                    <li><a href="#apple">Apple</a></li>
-                    <li><a href="#intro_sos"><img src="images/gfriend_logo_small_black.png"></a></li>
+                    <li class="underline"><a href="#brkroom">Broken Room</a></li>
+                    <li class="on underline"><a href="#tilted">Tilted</a></li>
+                    <li class="underline"><a href="#apple">Apple</a></li>
+                    <li class="underline"><a href="#intro_sos"><img src="images/gfriend_logo_small_black.png"></a></li>
                 </ul>
             </div>
         </section>
@@ -292,9 +155,8 @@
                 <div class="menu_hover">
                     <ul class="menu_hover_ul">
                         <li><a href="#">MAIN</a></li>
-                        <li><a href="#">SOURCE MUSIC</a></li>
-                        <li><a href="#">GFRIEND</a></li>
-                        <li><a href="#">NEWS</a></li>
+                        <li><a href="aboutGFR.html">GFRIEND</a></li>
+                        <li><a href="news.html">NEWS</a></li>
                     </ul>
                 </div>
             </div>
@@ -315,10 +177,10 @@
             </div>
             <div class="col-12 c3h3" id="concept_ver">
                 <ul class="concept_ver">
-                    <li><a href="#brkroom">Broken Room</a></li>
-                    <li><a href="#tilted">Tilted</a></li>
-                    <li class="on"><a href="#apple">Apple</a></li>
-                    <li><a href="#intro_sos"><img src="images/gfriend_logo_small_black.png"></a></li>
+                    <li class="underline"><a href="#brkroom">Broken Room</a></li>
+                    <li class="underline"><a href="#tilted">Tilted</a></li>
+                    <li class="on underline"><a href="#apple">Apple</a></li>
+                    <li class="underline"><a href="#intro_sos"><img src="images/gfriend_logo_small_black.png"></a></li>
                 </ul>
             </div>
         </section>
@@ -331,7 +193,6 @@
             <div class="col-12 c4h0" id="menubox3"><img src="images/menu.png" alt="메뉴"  class="menubtn"><div class="menu_hover">
                     <ul class="menu_hover_ul">
                         <li><a href="#">MAIN</a></li>
-                        <li><a href="#">SOURCE MUSIC</a></li>
                         <li><a href="#">GFRIEND</a></li>
                         <li><a href="#">NEWS</a></li>
                     </ul>
