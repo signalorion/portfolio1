@@ -9,30 +9,7 @@
   src: url(../fonts/Oranienbaum.ttf) format("truetype")
 }
 
-.bgBlur:before {
 
-  content: '';
-
-  position: absolute;
-
-  top: 0; left:0; right:0; bottom:0;
-
-  background: inherit;
-
-  z-index:-1;
-
-  filter: blur(6px); 
-
-  -webkit-filter: blur(6px); 
-
-  -moz-filter: blur(6px);
-
-  -o-filter: blur(6px);
-
-  filter:url(#blur);
-
-}
-/*https://feeva.github.io/posts/%EC%9D%B4%EB%AF%B8%EC%A7%80%EC%9D%98-%EA%B0%80%EB%A1%9C%EC%84%B8%EB%A1%9C%EB%B9%84%EB%A5%BC-%EC%9C%A0%EC%A7%80%ED%95%98%EB%A9%B4%EC%84%9C-%ED%8B%80-%EC%95%88%EC%97%90-%EB%A7%9E%EC%B6%94%EB%A0%A4*/
 
 html,
 body,
@@ -86,7 +63,7 @@ html,
 body {
     width: 100%;
     height: 100%;
-   /* overflow: hidden;*/ /*스크롤 드르륵을 위해서*/
+    overflow: hidden; /*스크롤 드르륵을 위해서*/
 }
 
 body {
@@ -106,6 +83,10 @@ body {
     height: 100%;
     margin: 0 auto;
 }
+.inbox2 {
+    width: 100%;
+}
+
 
 /***************************************************1. 메인페이지*/
 #cont1 {
@@ -153,7 +134,7 @@ body {
 
 .cont2_ban {
     position: relative;
-    width: 100%;
+    /*width: 100%;*/
     background:url(../images/apple/Apple_1.jpg) no-repeat 0/contain;
     
 }
@@ -231,23 +212,31 @@ body {
     display: flex;
 }
 
+
 .memberinfo_box {
     position: relative;
+    top: 50%;
+    transform: translateY(-50%);
     width: 100%;
-    height: 100%;
-    display: flex;
+    overflow: hidden;
 }
+
 
 .proclose {
     position: absolute;
-    top: -40px;
-    right: -40px;
+    top: 10px;
+    right: 10px;
 }
 
+
 .member_proimg {
-    width: 500px;
+    width: 45%;
     /*비율유지 못해먹겠다*/
+    height: auto;
+    float: left;
 }
+
+
 .member_proimg::after{
   content: "";
   display: block;
@@ -256,10 +245,12 @@ body {
 
 .member_text {
     color: white;
-    width: calc(100% - 650px);
+    width: 55%;
     /*border: 1px solid blue;*/
     padding-top: 10%;
     padding-left: 5%;
+    float: right;
+    box-sizing: border-box;
 }
 
 .member_text h4 {
@@ -297,6 +288,7 @@ body {
 
 .proyerin {
     background: url(../images/apple/Apple_yr1.jpg) no-repeat center/cover;
+    
 }
 
 .proeunha {
@@ -321,15 +313,31 @@ body {
 }
 
 .cont3_title{padding:10px; height: 6%; font-family: oranien;}
-.cont3_title h2{font-size: 33px; color:#ae1723;}
+.cont3_title h2{font-size: 45px; color:#ae1723; padding-left: 2%;}
 
 .discograp {
-    width: 100%;
+    width: 95%;
     height: 90%;
     overflow-y: scroll;
+    margin: auto 0 auto auto;
+}
+
+
+.discograp::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+.discograp::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 5px;
+}
+
+.discograp::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 5px;
 }
 .discograp h5{
-    font-size: 23px;
+    font-size: 30px;
 }
 
 .discograp ul {
@@ -337,8 +345,8 @@ body {
 }
 
 .discograp ul li {
-    width: 30%;
-    margin-right: 4%;
+    width: 25%;
+    margin-right: 5%;
     position: relative;
 }
 
@@ -500,66 +508,67 @@ body {
     position: relative;
 }
 
-.albumdetail{
+.albumdetail::before{
+    content: "";
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    /*  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
   filter: blur(5px);
-    z-index: 1;*/
+    z-index: 1;
 }
-.albumdetail.no13{
+.albumdetail.no13::before{
     background: url(../images/albumimg/13.png) no-repeat center/190%;
      
 }
-.albumdetail.no12{
+.albumdetail.no12::before{
     background: url(../images/albumimg/12.jpg) no-repeat center/190%;
 }
-.albumdetail.no11{
+.albumdetail.no11::before{
     background: url(../images/albumimg/11.jpg) no-repeat center/190%;
 }
-.albumdetail.no10{
+.albumdetail.no10::before{
     background: url(../images/albumimg/10.jpg) no-repeat center/190%;
 }
-.albumdetail.no9{
+.albumdetail.no9::before{
     background: url(../images/albumimg/9.jpg) no-repeat center/190%;
 }
-.albumdetail.no8{
+.albumdetail.no8::before{
     background: url(../images/albumimg/8.jpg) no-repeat center/190%;
 }
-.albumdetail.no7{
+.albumdetail.no7::before{
     background: url(../images/albumimg/7.jpg) no-repeat center/190%;
 }
-.albumdetail.no6{
+.albumdetail.no6::before{
     background: url(../images/albumimg/6.jpg) no-repeat center/190%;
 }
-.albumdetail.no5{
+.albumdetail.no5::before{
     background: url(../images/albumimg/5.jpg) no-repeat center/190%;
 }
-.albumdetail.no4{
+.albumdetail.no4::before{
     background: url(../images/albumimg/4.jpg) no-repeat center/190%;
 }
-.albumdetail.no3{
+.albumdetail.no3::before{
     background: url(../images/albumimg/3.jpg) no-repeat center/190%;
 }
-.albumdetail.no2{
+.albumdetail.no2::before{
     background: url(../images/albumimg/2.jpg) no-repeat center/190%;
 }
-.albumdetail.no1{
+.albumdetail.no1::before{
     background: url(../images/albumimg/1.jpg) no-repeat center/190%;
 }
 
 
 .albuminfo {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left:50%;
+    transform: translateX(-50%);
     width: 1280px;
     max-width: 100%;
-    margin: 0 auto;
+   
+    z-index: 2;
     
 }
 
@@ -571,6 +580,7 @@ body {
 
 .detail_close img {
     width: 45px;
+    z-index: 2;
 }
 
 

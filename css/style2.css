@@ -47,7 +47,7 @@ li {
 a {
     text-decoration: none;
     color: #222;
-    
+
 }
 
 .ir {
@@ -131,20 +131,22 @@ body {
     white-space: nowrap;
 }
 
-#teaservideo {
+/*#teaservideo {
     position: absolute;
     width: 100%;
     height: 100%;
-    /*    object-fit: cover; 비디오가 잘려보이니까*/
-}
+
+}*/
 
 #introtitle {
     position: absolute;
+    width: 100%;
+    height: 100%;
     color: white;
     font-family: 'Six Caps', sans-serif;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -45%);
     font-size: 110px;
     text-align: center;
     font-weight: 100;
@@ -220,9 +222,10 @@ body {
 
 .videotitle {
     position: absolute;
-    bottom: 0;
-    left: 0%;
+    width: 100%;
+    height: 100%;
 }
+.videotit_box{bottom: 0; left: 0; position: absolute;}
 
 .videotitle_title {
     display: block;
@@ -278,6 +281,7 @@ body {
 .slide1 li {
     width: 16.666%;
     height: 100%;
+    /*transition: all .5s; 구르미랑 같은 원리 아닌가?? 왜 트랜지션안먹지*/
 
 }
 
@@ -335,46 +339,38 @@ body {
     height: 85px;
 }
 
-.concept_ver li {
+/*.concept_ver li {
     float: left;
     width: 214px;
     text-align: center;
     line-height: 80px;
     position: relative;
-}
-.concept_ver img{padding:6%; width:25%;}
+}*/
 
-.concept_ver li::after{display: none;}
-.concept_ver li::after {
-    content: "";
-    width: 50%;
-    overflow: hidden;
+.concept_ver img {
+    padding: 6%;
+    width: 25%;
+}
+/*컨셉밑줄뜨기*/
+.concept_ver{position: absolute; width: 100%;}
+.concept_ver li{display: inline-block; width: 25%;}
+.concept_ver li a{display: inline-block;}
+.underline::after{
+    content: '';
+    display: block;
+    width: 0;
     height: 1px;
-    background-color: #000;
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    /*on상태 아닌 애들한테만 주고싶은데*/
+    background-color: #222;
+    transition: width .4s;
 }
-
-/*.concept_ver li:hover .concept_ver li::after{
-    width:50%;
-}*/
-
-/*.concept_ver li:hover {
-    text-decoration: line-through;
-    font-size: 18px;
-    transition: text-decoration, .7s;
-}*/
-
-/*.concept_ver .on {
-    font-size: 18px;
-    text-decoration: line-through;
-
-}*/
-.concept_ver li:last-child::after{width: 0;}
+.underline:hover::after{
+    width: 100%;
+    transition: width .4s;
+}
 
 #concept_ver {
+    position: relative;
+    width: 100%;
     display: flex;
     justify-content: center;
     /*align-items: center;*/
@@ -477,7 +473,7 @@ body {
 
 .menu_hover li {
     line-height: 44px;
-    width: 25%;
+    width: 33%;
     text-align: center;
     font-size: 19px;
 }
@@ -511,12 +507,15 @@ body {
     left: 0;
     width: 800%;
     height: 100%;
+
 }
 
-/*사진이 6장이라 600퍼*/
+
 .slide3 li {
     width: 12.5%;
     height: 100%;
+    
+
 }
 
 .slide3 > li.s1 {
@@ -564,6 +563,7 @@ body {
 /**************************************4. 앨범소개영역*/
 .cont4 {
     background: url(../images/newalbum_bg.jpg) no-repeat center/cover;
+    /*background-attachment: fixed;*/
 }
 
 .c4h0 {
@@ -657,7 +657,7 @@ body {
 }
 
 .tracklist_ul {
-        width: 92%;
+    width: 92%;
     padding-left: 10%;
     color: #333;
 }
@@ -724,7 +724,10 @@ body {
     left: 50%;
     text-shadow: 1px 1px 2px #000;
 }
-.up_arrow img{filter: drop-shadow( 1px 1px 2px #000);}
+
+.up_arrow img {
+    filter: drop-shadow(1px 1px 2px #000);
+}
 
 /*곡 설명 스크롤관련*/
 #cont4_tracklist {
