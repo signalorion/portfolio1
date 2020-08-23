@@ -124,12 +124,12 @@ body {
 /*************************************1. 인트로영역*/
 /*화면작아질때 글씨크기의 문제를 해결해야한다!! ->해결 : white-space 노랩을 줘야함*/
 #cont1 {
-    position: relative;
     width: 100%;
     height: 100%;
     background-color: #000;
     white-space: nowrap;
 }
+.desktopintro{width: 100%; height: 100%; position: relative;}
 
 /*#teaservideo {
     position: absolute;
@@ -146,7 +146,7 @@ body {
     font-family: 'Six Caps', sans-serif;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -45%);
+    transform: translate(-50%, -40%);
     font-size: 110px;
     text-align: center;
     font-weight: 100;
@@ -164,6 +164,30 @@ body {
 
 .nextpage img {
     width: 35%;
+}
+
+/*모바일페이지 설정*/
+.mobileintro {
+    display: none;
+}
+
+.mobileintro {
+    width: 100%;
+    height: 100%;
+}
+
+.mobileint_bg {
+    background: url(../images/main_burn.jpg) no-repeat bottom/cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.m_intro_tit {
+    position: absolute;
+    top: 13%;
+    left: 55%;
+    transform: scale(1.2) translateX(-50%);
 }
 
 /*************************************2. 메인 페이지*/
@@ -225,7 +249,12 @@ body {
     width: 100%;
     height: 100%;
 }
-.videotit_box{bottom: 0; left: 0; position: absolute;}
+
+.videotit_box {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}
 
 .videotitle_title {
     display: block;
@@ -251,7 +280,9 @@ body {
     bottom: 0;
     right: 0;
 }
-
+/*모바일 설정*/
+.m_mainmenu{display: none;}
+.m_mainmenu_box{display: none;}
 /***********************************3. 앨범컨셉 사진영역*/
 /*브로큰 룸*/
 .cont3 {
@@ -333,6 +364,8 @@ body {
 #concepttitle {
     text-align: center;
     padding-top: 10px;
+        display: flex;
+    justify-content: center;
 }
 
 #concepttitle img {
@@ -351,11 +384,23 @@ body {
     padding: 6%;
     width: 25%;
 }
+
 /*컨셉밑줄뜨기*/
-.concept_ver{position: absolute; width: 100%;}
-.concept_ver li{display: inline-block; width: 25%;}
-.concept_ver li a{display: inline-block;}
-.underline::after{
+.concept_ver {
+    position: absolute;
+    width: 100%;
+}
+
+.concept_ver li {
+    display: inline-block;
+    width: 25%;
+}
+
+.concept_ver li a {
+    display: inline-block;
+}
+
+.underline::after {
     content: '';
     display: block;
     width: 0;
@@ -363,7 +408,8 @@ body {
     background-color: #222;
     transition: width .4s;
 }
-.underline:hover::after{
+
+.underline:hover::after {
     width: 100%;
     transition: width .4s;
 }
@@ -514,7 +560,7 @@ body {
 .slide3 li {
     width: 12.5%;
     height: 100%;
-    
+
 
 }
 
@@ -648,6 +694,7 @@ body {
 
 #cont4_tracklist {
     padding: 20px 20px 0 20px;
+    position: relative;
 }
 
 #cont4_tracklist h2 {
@@ -705,6 +752,8 @@ body {
     text-align: center;
     color: #969696;
     font-size: 11px;
+    position: absolute;
+    bottom: 0;
 }
 
 .up_arrow {

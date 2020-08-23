@@ -121,43 +121,13 @@ $(function () {
 
     $(".track_plus").click(function () {
         //화살표 돌아가는거 하고싶다
-        $(this).next().slideToggle(function () {});
+        $(this).parent().next().slideToggle(function () {});
 
         /*$("img",this).css({transform: 'rotate(-45deg)', transition:"all .6s"});*/
-
-        $(".tracklist_tit.no1").css({
-            fontWeight: "bold"
-        });
-    });
-    $(".track_plus.no2").click(function () {
-
-        $(".tracklist_tit.no2").css({
-            fontWeight: "bold"
-        });
-    });
-    $(".track_plus.no3").click(function () {
-
-        $(".tracklist_tit.no3").css({
-            fontWeight: "bold"
-        });
-    });
-    $(".track_plus.no4").click(function () {
-
-        $(".tracklist_tit.no4").css({
-            fontWeight: "bold"
-        });
-    });
-    $(".track_plus.no5").click(function () {
-
-        $(".tracklist_tit.no5").css({
-            fontWeight: "bold"
-        });
-    });
-    $(".track_plus.no6").click(function () {
-
-        $(".tracklist_tit.no6").css({
-            fontWeight: "bold"
-        });
+        $(this).prev().css({
+            fontWeight:"bold"
+        }); /*다른애들은 볼드 안됐으면 좋겠는데...*/
+    
     }); ////////신곡소개///////////////
 
     $(".menubtn").mouseenter(function () {
@@ -165,6 +135,7 @@ $(function () {
         $(".menu_hover").css({
             width: "40%",
             transition: "all, .8s"
+            
         });
     });
     $(".menubtn").mouseout(function () {
@@ -176,7 +147,7 @@ $(function () {
     }); ////////메뉴버튼 설정///////////가만히좀있게못하나....
 
     //페이지 스르륵 내려가기//////////////////////////////////
-    $(".nextpage a, #cont1 a, .mainlistlogo a").click(function (e) {
+    $(".nextpage a, #cont1 a, .mainlistlogo a, .m_mainmenu_list a").click(function (e) {
         e.preventDefault();
 
         var pid = $(this).attr("href");
@@ -224,6 +195,11 @@ $(function () {
             bottom: "50px"
         });
     }); ////////////////////메인으로가는 화살표 움직이기
+    
+    /*모바일 설정********************************/
+   $(".m_mainmenu").click(function(){
+  $(".m_mainmenu_box").toggle();
+});
 
 
 

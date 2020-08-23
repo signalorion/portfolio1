@@ -1,0 +1,342 @@
+@charset "utf-8";
+/*GFR미디어쿼리*/
+
+
+/*
+[미디어쿼리 사이즈별 세팅의 기준]
+1. 디자인 상 필요한 사이즈에 셋팅한다 1200 /1024 / 768 /375
+2. 1024픽셀 사이즈에 셋팅한다 - 태블릿사이즈 기준으로 본다 (아이패드 가로크기)
+3. 모바일 사이즈는 세로로 볼 때 사이즈를 포함하며 가로로 볼 때 사이즈를 포함하지 않는 사이즈를 정한다(여기서는 500픽셀로 본다)
+*/
+
+/*
+[미디어쿼리를 보다 쉽게 변경하는 방법]
+1. 레이아웃박스를 %로 셋팅한다 (100%로 변경하는 경우 많다)
+2. 내부박스의 높이값을 개별적으로 주기
+3. position absolute박스를 static하게 변경하여 위치를 차지하게한다
+4. 브라우저 분석기로 열고 우선 속성을 변경하여 적용될 때 이것을 복사하여 붙인다
+
+*/
+
+
+@media only screen and (max-width: 1200px) {
+    .videotitle {
+        /*만약에 비디오 삽입할거면 딱히 안 써도 될 듯*/
+        position: static;
+    }
+
+    .videotitle_title {
+        transform: scale(0.9) translateY(10%);
+    }
+
+    .videotitle_name {
+        transform: scale(0.9) translateX(10%);
+    }
+
+    .mainlinks {
+        margin-left: 2%;
+    }
+
+}
+
+/*1200픽셀 미디어쿼리끝***************************************
+************************************************************/
+
+@media only screen and (max-width: 1024px) {
+    #introtitle {
+        transform: translate(-50%, -40%);
+        font-size: 100px;
+    }
+
+    .tracklist_ul {
+        width: 96%;
+        padding-left: 6%;
+    }
+
+    #cont4_tracklist h2 {
+        padding-left: 5%;
+    }
+
+    .up_arrow a {
+        left: 8%;
+    }
+}
+
+/*1024픽셀 미디어쿼리끝***************************************
+************************************************************/
+
+@media only screen and (max-width: 860px) {
+    #introtitle {
+        font-size: 88px;
+    }
+
+    .videotitle_title {
+        transform: scale(0.8) translate(-10%, 10%);
+    }
+
+    .videotitle_name {
+        transform: scale(0.9) translateX(-5%);
+    }
+
+    .mainlinks {
+        margin-left: -4%;
+    }
+
+    .c2h1 {
+        height: calc(100% - 95px);
+    }
+
+    .c2h2 {
+        height: 95px;
+        line-height: 95px;
+    }
+
+    .mainlistlogo img {
+        transform: scale(.7);
+    }
+
+    .c4h0 {
+        height: 65px;
+    }
+
+    .c4h1 {
+        height: calc(100% - 415px);
+    }
+
+    .this_albumintro b {
+        font-size: 15px;
+    }
+
+    .this_intro1,
+    .this_intro2 {
+        line-height: 22px;
+    }
+
+    .c4h2 {
+        height: 350px;
+    }
+
+    .trackintro {
+        font-size: 14px;
+    }
+
+}
+
+/*800픽셀 미디어쿼리끝***************************************
+************************************************************/
+
+@media only screen and (max-width: 768px) {
+    .desktopintro {
+        display: none;
+    }
+
+    .mainmenu {
+        display: none;
+    }
+
+    .main_source_logo,
+    .videotit_box img {
+        display: none;
+    }
+
+    .mobileintro {
+        display: block;
+    }
+
+
+
+    .mainlinks {
+        width: 100%;
+        display: block;
+        margin: auto;
+        padding-left: 3%;
+    }
+
+    .mainlinks a:first-child {
+        width: 100%;
+        display: block;
+        margin-bottom: 5%;
+        font-size: 30px;
+    }
+
+    .mainlinks a:nth-child(2) {
+        font-size: 30px;
+    }
+
+
+    .c2h0 {
+        height: 95px;
+    }
+
+    .m_mainmenu {
+        display: block;
+    }
+
+    .m_mainmenu {
+        position: absolute;
+        z-index: 4;
+    }
+
+    .m_mainmenu img {
+        width: 10%;
+        float: right;
+        margin-right: 3%;
+    }
+
+    /*.m_mainmenu_box{display: none;}*/
+    .m_mainmenu_box {
+        width: 50%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 3;
+    }
+
+    #cont2 {
+        position: relative;
+    }
+
+    .m_mainmenu_list {
+        margin: 45% 15%;
+    }
+
+    .m_mainmenu_list img {
+        transform: scale(1.2);
+    }
+
+    .m_mainmenu_list li {
+        float: none;
+        margin: 20% 0;
+    }
+
+    .m_mainmenu_list a {
+        color: white;
+        font-size: 25px;
+    }
+
+    /*3. 컨셉타이틀*/
+    #concepttitle img {
+        transform: scale(0.7);
+    }
+
+    /*4.앨범소개*/
+    .cont4texts {
+        text-shadow: 1px 1px 2px #fff;
+    }
+
+    .this_intro1,
+    .this_intro2 {
+        font-size: 14px;
+    }
+}
+
+/*768픽셀 미디어쿼리끝***************************************
+************************************************************/
+
+@media only screen and (max-width: 550px) {
+
+    /*컨셉슬라이드*/
+    .c3h1 {
+        height: 10%;
+    }
+
+    .c3h2 {
+        height: 90%;
+    }
+
+    #concept_ver {
+        display: none;
+    }
+
+    .slide1 > li.s1 {
+        background: url(../images/brkroom/Broken_Room_11.jpg) no-repeat 45%;
+        background-size: auto;
+    }
+
+    .img_arrow {
+        display: none;
+    }
+
+    .slide2 li {
+        display: none;
+    }
+
+    .slide2 .s3 {
+        display: block;
+    }
+
+    .slide2 > li.s3 {
+        background: url(../images/tilted/Tilted_1.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    .slide3 li {
+        display: none;
+    }
+
+    .slide3 .s2 {
+        display: block;
+    }
+
+    .slide3 > li.s2 {
+        background: url(../images/apple/Apple_2.jpg) no-repeat center;
+        background-size: cover;
+    }
+
+    .menubtn {
+        top: 15%;
+    }
+
+    .menu_hover {
+        top: 16%;
+        margin-right: 3%;
+    }
+
+    /*앨범소개영역*/
+    #cont4 .col-5 {
+        width: 100%;
+    }
+
+    #cont4 .col-7 {
+        width: 100%;
+    }
+
+    #cont4 .col-11 {
+        width: 100%;
+    }
+
+    .up_arrow {
+        display: none;
+    }
+
+    .this_albumintro {
+        text-align: center;
+        padding-right: 15px;
+    }
+
+    #intro_sos {
+        height: 200%;
+    }
+
+    .c4h0 {
+        height: 5%;
+    }
+
+    .c4h1 {
+        height: 30%;
+    }
+
+    .c4h2 {
+        height: 35%;
+    }
+    
+.tracklist_ul li {
+    padding: 6% 0; padding-left: 5%;}
+    .tracklist_ul > li img {
+        top: 25px;}
+}
+
+/*550픽셀 미디어쿼리끝***************************************
+************************************************************/
