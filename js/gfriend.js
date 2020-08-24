@@ -133,7 +133,7 @@ $(function () {
     $(".menubtn").mouseenter(function () {
         /*width 55퍼로 늘리기*/
         $(".menu_hover").css({
-            width: "40%",
+            width: "300px",
             transition: "all, .8s"
             
         });
@@ -147,7 +147,7 @@ $(function () {
     }); ////////메뉴버튼 설정///////////가만히좀있게못하나....
 
     //페이지 스르륵 내려가기//////////////////////////////////
-    $(".nextpage a, #cont1 a, .mainlistlogo a, .m_mainmenu_list a").click(function (e) {
+    $(".nextpage a, #cont1 a, .mainlistlogo a, .m_mainmenu_list a, .arrowdw").click(function (e) {
         e.preventDefault();
 
         var pid = $(this).attr("href");
