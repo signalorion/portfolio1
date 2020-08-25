@@ -283,6 +283,7 @@ body {
 /*모바일 설정*/
 .m_mainmenu{display: none;}
 .m_mainmenu_box{display: none;}
+.arrowdw{display: none;}
 /***********************************3. 앨범컨셉 사진영역*/
 /*브로큰 룸*/
 .cont3 {
@@ -400,6 +401,9 @@ body {
 .concept_ver li a {
     display: inline-block;
 }
+.underline{text-align: center;
+    padding-top: 30px;}
+.underline img{transform: scale(2);}
 
 .underline::after {
     content: '';
@@ -680,7 +684,7 @@ body {
 
 .this_links {
     position: absolute;
-    bottom: 30px;
+    bottom: 0;
 }
 
 .this_links li {
