@@ -138,9 +138,9 @@ $(function () {
             
         });
     });
-    $(".menubtn").mouseout(function () {
+    $(".menu_hover").mouseleave(function () {
         /*width 55퍼로 늘리기*/
-        $(".menu_hover").css({
+        $(this).css({
             width: "0%",
             transition: "all, .8s"
         });
@@ -171,6 +171,10 @@ $(function () {
         $("html, body").animate({
             scrollTop: ptop + "px"
         }, 800);
+        
+        // 전역변수 pno를 처음값으로!
+        pno = 0;
+        
     }); //////////////콘셉이름 클릭시////////////
 
     $(".mainlinks .mainviewinfo").click(function (e) {

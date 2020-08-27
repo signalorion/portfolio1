@@ -151,6 +151,7 @@ body {
 
 .cont2_sns {
     display: flex;
+    z-index: 1;
 }
 .cont2_sns a{
     display: block;

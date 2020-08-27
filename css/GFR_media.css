@@ -293,7 +293,10 @@
         top: 16%;
         margin-right: 3%;
     }
-    .arrowdw{display: block;}
+
+    .arrowdw {
+        display: block;
+    }
 
     .slide1 .s1 {
         position: relative;
@@ -378,6 +381,16 @@
     .tracklist_ul > li img {
         top: 25px;
     }
+
+
+    #movie {
+        left: 50%;
+        width: 256%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
 }
 
 /*550픽셀 미디어쿼리끝***************************************
