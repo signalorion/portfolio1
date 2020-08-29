@@ -133,21 +133,21 @@ $(function () {
     $(".menubtn").mouseenter(function () {
         /*width 55퍼로 늘리기*/
         $(".menu_hover").css({
-            width: "40%",
+            width: "300px",
             transition: "all, .8s"
             
         });
     });
-    $(".menubtn").mouseout(function () {
+    $(".menu_hover").mouseleave(function () {
         /*width 55퍼로 늘리기*/
-        $(".menu_hover").css({
+        $(this).css({
             width: "0%",
             transition: "all, .8s"
         });
     }); ////////메뉴버튼 설정///////////가만히좀있게못하나....
 
     //페이지 스르륵 내려가기//////////////////////////////////
-    $(".nextpage a, #cont1 a, .mainlistlogo a, .m_mainmenu_list a").click(function (e) {
+    $(".nextpage a, #cont1 a, .mainlistlogo a, .m_mainmenu_list:first-child>a, .arrowdw").click(function (e) {
         e.preventDefault();
 
         var pid = $(this).attr("href");
@@ -171,6 +171,10 @@ $(function () {
         $("html, body").animate({
             scrollTop: ptop + "px"
         }, 800);
+        
+        // 전역변수 pno를 처음값으로!
+        pno = 0;
+        
     }); //////////////콘셉이름 클릭시////////////
 
     $(".mainlinks .mainviewinfo").click(function (e) {

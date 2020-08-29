@@ -151,6 +151,7 @@ body {
 
 .cont2_sns {
     display: flex;
+    z-index: 1;
 }
 .cont2_sns a{
     display: block;
@@ -619,14 +620,14 @@ body {
 }
 
 .album_track h4 {
-    color: #444;
+    color: #fff;
     font-size: 35px;
     font-weight: 900;
     margin-bottom: 10px;
 }
 
 .tracklist_ul {
-    color: #282828;
+    color: #fff;
     width: 100%;
     font-size: 20px;
 }

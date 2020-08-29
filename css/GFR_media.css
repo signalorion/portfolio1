@@ -236,7 +236,13 @@
 ************************************************************/
 
 @media only screen and (max-width: 550px) {
-
+    .c2h0 {
+    height: 5%;
+}
+    .c2h1 {
+    height: 95%;
+}
+    
     /*컨셉슬라이드*/
     .c3h1 {
         height: 10%;
@@ -294,6 +300,47 @@
         margin-right: 3%;
     }
 
+    .arrowdw {
+        display: block;
+    }
+
+    .slide1 .s1 {
+        position: relative;
+    }
+
+    .arrowdw.nu1 {
+        position: absolute;
+        bottom: 1%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .slide2 .s3 {
+        position: relative;
+    }
+
+    .arrowdw.nu2 {
+        position: absolute;
+        bottom: 1%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .slide3 .s2 {
+        position: relative;
+    }
+
+    .arrowdw.nu3 {
+        position: absolute;
+        bottom: 1%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .arrowdw img {
+        width: 90px;
+    }
+
     /*앨범소개영역*/
     #cont4 .col-5 {
         width: 100%;
@@ -331,12 +378,98 @@
     .c4h2 {
         height: 35%;
     }
-    
-.tracklist_ul li {
-    padding: 6% 0; padding-left: 5%;}
+
+    .tracklist_ul li {
+        padding: 6% 0;
+        padding-left: 5%;
+    }
+
     .tracklist_ul > li img {
-        top: 25px;}
+        top: 25px;
+    }
+
+
+    #movie {
+        left: 50%;
+        width: 256%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+
 }
 
 /*550픽셀 미디어쿼리끝***************************************
+************************************************************/
+
+
+@media only screen and (max-width: 375px) {
+
+    /*1. 인트로*/
+    .m_intro_tit {
+        position: absolute;
+        top: 13%;
+        left: 45%;
+        transform: scale(0.8) translateX(-50%);
+    }
+
+    /*2. 메인*/
+    .mainlinks a:first-child {
+        font-size: 20px;
+    }
+
+    .mainlinks a:nth-child(2) {
+        font-size: 20px;
+    }
+
+    .m_mainmenu_list img {
+        transform: scale(1);
+    }
+
+    .m_mainmenu_list a {
+        font-size: 20px;
+    }
+
+    /*3. 사진슬라이드*/
+    #concepttitle img {
+        transform: scale(0.45);
+    }
+
+    /*4. 앨범소개*/
+    .this_intro1,
+    .this_intro2,
+    .this_links {
+        font-size: 12px;
+    }
+
+    .this_links {
+        bottom: 10px;
+    }
+
+    .info {
+        font-size: 10px;
+    }
+
+    .tracklist_ul li {
+        font-size: 15px;
+    }
+
+    .tracklist_ul > li img {
+        top: 15px;
+        transform: scale(0.7);
+    }
+}
+
+.tracklist_ul > li small {
+    left: -15px;
+    font-size: 11px;
+}
+
+#cont4_tracklist h2 {
+    font-size: 35px;
+}
+
+}
+
+/*375픽셀 미디어쿼리끝***************************************
 ************************************************************/

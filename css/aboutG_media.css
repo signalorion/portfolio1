@@ -1,0 +1,119 @@
+@charset "utf-8";
+/*GFR미디어쿼리*/
+
+
+/*
+[미디어쿼리 사이즈별 세팅의 기준]
+1. 디자인 상 필요한 사이즈에 셋팅한다 1200 /1024 / 768 /375
+2. 1024픽셀 사이즈에 셋팅한다 - 태블릿사이즈 기준으로 본다 (아이패드 가로크기)
+3. 모바일 사이즈는 세로로 볼 때 사이즈를 포함하며 가로로 볼 때 사이즈를 포함하지 않는 사이즈를 정한다(여기서는 500픽셀로 본다)
+*/
+
+/*
+[미디어쿼리를 보다 쉽게 변경하는 방법]
+1. 레이아웃박스를 %로 셋팅한다 (100%로 변경하는 경우 많다)
+2. 내부박스의 높이값을 개별적으로 주기
+3. position absolute박스를 static하게 변경하여 위치를 차지하게한다
+4. 브라우저 분석기로 열고 우선 속성을 변경하여 적용될 때 이것을 복사하여 붙인다
+
+*/
+
+@media only screen and (max-width: 1200px) {
+
+    /*1. 인트로*/
+    .cont1_title {
+        font-size: 45px;
+        padding: 5% 5%;
+    }
+
+    .cont1_menu {
+        font-size: 28px;
+        right: -25%;
+    }
+
+    /*2. 멤버소개*/
+    .cont2blank {
+        width: 0%;
+    }
+
+    #cont2 {
+        position: relative;
+    }
+
+    #cont2_sns {
+        position: absolute;
+        right: 10%;
+        bottom: -18%;
+        display: block;
+        width: 5%;
+        z-index: 8;
+    }
+
+    .cont2_sns {
+        display: block;
+    }
+
+    .cont2_title {
+        padding: 2% 3%;
+    }
+
+    .cont2_ban {
+        width: 100%;
+        background: url(../images/apple/Apple_1.jpg) no-repeat 50%/contain;
+    }
+    
+    /*3. 앨범소개*/
+    .albumtext_box {
+    width: auto;
+        padding:5%;
+}
+
+}
+
+/*1200픽셀 미디어쿼리끝***************************************
+************************************************************/
+
+@media only screen and (max-width: 1024px) {
+    /*1. 인트로*/
+    .cont1_menu {
+    right: -30%;
+}
+    /*2. 멤버소개*/
+    #cont2_sns {
+        right: 4%;}
+
+    /*3. 앨범소개*/
+    
+.tracklist_ul {
+    font-size: 16px;}
+    .tracklist_ul li {
+        line-height: 40px;}
+
+}
+
+/*1024픽셀 미디어쿼리끝***************************************
+************************************************************/
+
+@media only screen and (max-width: 768px) {
+    /*1. 인트로*/
+    .cont1_title {
+        font-size: 40px;}
+    .cont1_menu {
+    right: -37%;
+}
+/*3. 앨범소개*/
+    .discograp h5 {
+    font-size: 20px;
+}
+    .cont3_title h2 {
+        font-size: 35px;}
+    .albuminfo_img {
+    margin-top: 18px;
+}
+    .albumimg_hover {
+        font-size: 16px;}
+
+}
+
+/*768픽셀 미디어쿼리끝***************************************
+************************************************************/
