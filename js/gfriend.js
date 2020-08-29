@@ -123,10 +123,6 @@ $(function () {
         //화살표 돌아가는거 하고싶다
         $(this).parent().next().slideToggle(function () {});
 
-        /*$("img",this).css({transform: 'rotate(-45deg)', transition:"all .6s"});*/
-        $(this).prev().css({
-            fontWeight:"bold"
-        }); /*다른애들은 볼드 안됐으면 좋겠는데...*/
     
     }); ////////신곡소개///////////////
 
@@ -147,7 +143,7 @@ $(function () {
     }); ////////메뉴버튼 설정///////////가만히좀있게못하나....
 
     //페이지 스르륵 내려가기//////////////////////////////////
-    $(".nextpage a, #cont1 a, .mainlistlogo a, .m_mainmenu_list:first-child>a, .arrowdw").click(function (e) {
+    $(".nextpage a, #cont1 a, .mainlistlogo a, .m_mm_logo a, .arrowdw").click(function (e) {
         e.preventDefault();
 
         var pid = $(this).attr("href");
@@ -160,7 +156,7 @@ $(function () {
         }, 800);
     }); ////////////로딩화면 화살표 클릭시///////////////
 
-    $(".concept_ver li a, .up_arrow a").click(function (e) {
+    $(".concept_ver a, .up_arrow a").click(function (e) {
         e.preventDefault();
 
         var pid = $(this).attr("href");
@@ -173,9 +169,10 @@ $(function () {
         }, 800);
         
         // 전역변수 pno를 처음값으로!
+        //근데 왜 위 화살표는 먹고 얘는 안먹는거??
         pno = 0;
         
-    }); //////////////콘셉이름 클릭시////////////
+    }); //////////////콘셉이름, 위 화살표 클릭시////////////
 
     $(".mainlinks .mainviewinfo").click(function (e) {
         e.preventDefault();
@@ -188,6 +185,8 @@ $(function () {
         $("html, body").animate({
             scrollTop: ptop + "px"
         }, 900);
+        
+        pno = 0;
     }); //////////////메인메뉴 클릭시////////////
 
     $(".up_arrow a").hover(function () {

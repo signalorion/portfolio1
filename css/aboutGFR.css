@@ -211,6 +211,7 @@ body {
     padding: 60px;
     box-sizing: border-box;
     display: flex;
+    z-index: 10;
 }
 
 
@@ -656,11 +657,9 @@ body {
     width: 1280px;
     max-width: 100%;
     margin: 0 auto;
-}
-
-.albumtext_box {
     color: white;
 }
+
 
 .albumtexttitle h4 {
     font-size: 40px;

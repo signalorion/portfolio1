@@ -359,7 +359,7 @@
     }
 
     .this_albumintro {
-        text-align: center;
+        /*text-align: center;*/
         padding-right: 15px;
     }
 
@@ -372,7 +372,7 @@
     }
 
     .c4h1 {
-        height: 30%;
+        height: 25%;
     }
 
     .c4h2 {
@@ -395,7 +395,7 @@
         top: 50%;
         transform: translate(-50%, -50%);
     }
-
+    #cont4_tracklist{margin-top: 10%;}
 
 }
 
@@ -458,7 +458,7 @@
         top: 15px;
         transform: scale(0.7);
     }
-}
+
 
 .tracklist_ul > li small {
     left: -15px;
@@ -468,6 +468,7 @@
 #cont4_tracklist h2 {
     font-size: 35px;
 }
+    .cont4texts{height: 30%;}
 
 }
 

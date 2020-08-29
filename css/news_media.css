@@ -1,0 +1,105 @@
+@charset "utf-8";
+/*뉴스 미디어쿼리*/
+
+
+/*
+[미디어쿼리 사이즈별 세팅의 기준]
+1. 디자인 상 필요한 사이즈에 셋팅한다 1200 /1024 / 768 /375
+2. 1024픽셀 사이즈에 셋팅한다 - 태블릿사이즈 기준으로 본다 (아이패드 가로크기)
+3. 모바일 사이즈는 세로로 볼 때 사이즈를 포함하며 가로로 볼 때 사이즈를 포함하지 않는 사이즈를 정한다(여기서는 500픽셀로 본다)
+*/
+
+/*
+[미디어쿼리를 보다 쉽게 변경하는 방법]
+1. 레이아웃박스를 %로 셋팅한다 (100%로 변경하는 경우 많다)
+2. 내부박스의 높이값을 개별적으로 주기
+3. position absolute박스를 static하게 변경하여 위치를 차지하게한다
+4. 브라우저 분석기로 열고 우선 속성을 변경하여 적용될 때 이것을 복사하여 붙인다
+
+*/
+
+@media only screen and (max-width: 1200px) {
+    .newstitle {
+        font-size: 40px;
+        height: 15%;
+    }
+
+    .newsimg {
+        height: 380px;
+    }
+
+    .newslist_ul h4 {
+        height: 90px;
+        font-size: 15px;
+    }
+}
+
+/*1200미디어쿼리 끝*/
+
+@media only screen and (max-width: 1024px) {
+    .newstitle {
+        font-size: 35px;
+        height: 10%;
+        padding-top: 5%;
+    }
+
+    .newsimg {
+        height: 350px;
+    }
+
+    .newslist_ul h4 {
+        height: 80px;
+        font-size: 14px;
+    }
+
+}
+
+/*1024미디어쿼리 끝*/
+
+@media only screen and (max-width: 768px) {
+    .newslist_ul h4 {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .newsimg {
+        height: 320px;
+    }
+
+}
+
+/*768미디어쿼리 끝*/
+
+@media only screen and (max-width: 375px) {
+    .back2main {
+        right: 1%;
+        font-size: 15px;
+    }
+
+    .back2main img {
+        width: 15px;
+        margin-right: 7px;
+        vertical-align: -3px;
+    }
+
+    .newstitle {
+        font-size: 25px;
+        height: 12%;
+        padding-top: 5%;
+    }
+
+    .newslist_ul li {
+        width: 90%;
+    }
+
+    .newslist_ul li:nth-child(2n) {
+        margin-right: 0 5%;
+        margin-left: 5%;
+    }
+    .newsimg {
+    height: 255px;
+}
+    .info{font-size: 9px;}
+}
+
+/*375미디어쿼리 끝*/
