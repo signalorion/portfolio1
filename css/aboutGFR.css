@@ -63,7 +63,8 @@ html,
 body {
     width: 100%;
     height: 100%;
-    overflow: hidden; /*스크롤 드르륵을 위해서*/
+    overflow-x: hidden;
+    /*overflow: hidden;*/ /*스크롤 드르륵을 위해서*/
 }
 
 body {
@@ -127,6 +128,9 @@ body {
 .back2main img{width: 20px; margin-right: 10px; vertical-align: -5px;}
 
 /***********************************************2. 멤버소개페이지*/
+#cont2{
+    background-color: aliceblue;
+}
 .cont2_title{padding:10px 25px; color: #ae1723; font-weight: bold;}
 .cont2_title h2{font-size: 33px;}
 
@@ -201,11 +205,11 @@ body {
 /*멤버사진클릭시*/
 
 .member_info {
-    width: 100%;
+    width: 85%;
     height: 75%;
     background-color: rgba(0, 0, 0, 0.6);
-    position: absolute;
-    top: 40%;
+    position: fixed;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 60px;
@@ -233,7 +237,7 @@ body {
 
 .member_proimg {
     width: 45%;
-    /*비율유지 못해먹겠다*/
+    max-width: 600px;
     height: auto;
     float: left;
 }
@@ -509,55 +513,57 @@ body {
 #cont3 {
     position: relative;
 }
-
-.albumdetail::before{
-    content: "";
+.albumdetail{
+    position: fixed;
     width: 100%;
-    height: 100%;
-    position: absolute;
+    height: auto;
+    overflow-y: scroll;
     top: 0;
     left: 0;
-  filter: blur(5px);
-    z-index: 1;
+    right: 0;
+    bottom: 0;
+    z-index: 9;
+    background:url(../images/apple/Apple_1.jpg);
 }
-.albumdetail.no13::before{
-    background: url(../images/albumimg/13.png) no-repeat center/190%;
+
+.albumdetail.no13{
+    background: url(../images/albumimg/b13.jpg) no-repeat center/190%;
      
 }
-.albumdetail.no12::before{
-    background: url(../images/albumimg/12.jpg) no-repeat center/190%;
+.albumdetail.no12{
+    background: url(../images/albumimg/b12.jpg) no-repeat center/190%;
 }
-.albumdetail.no11::before{
-    background: url(../images/albumimg/11.jpg) no-repeat center/190%;
+.albumdetail.no11{
+    background: url(../images/albumimg/b11.jpg) no-repeat center/190%;
 }
-.albumdetail.no10::before{
-    background: url(../images/albumimg/10.jpg) no-repeat center/190%;
+.albumdetail.no10{
+    background: url(../images/albumimg/b10.jpg) no-repeat center/190%;
 }
-.albumdetail.no9::before{
-    background: url(../images/albumimg/9.jpg) no-repeat center/190%;
+.albumdetail.no9{
+    background: url(../images/albumimg/b9.jpg) no-repeat center/190%;
 }
-.albumdetail.no8::before{
-    background: url(../images/albumimg/8.jpg) no-repeat center/190%;
+.albumdetail.no8{
+    background: url(../images/albumimg/b8.jpg) no-repeat center/190%;
 }
-.albumdetail.no7::before{
-    background: url(../images/albumimg/7.jpg) no-repeat center/190%;
+.albumdetail.no7{
+    background: url(../images/albumimg/b7.jpg) no-repeat center/190%;
 }
-.albumdetail.no6::before{
+.albumdetail.no6{
     background: url(../images/albumimg/6.jpg) no-repeat center/190%;
 }
-.albumdetail.no5::before{
+.albumdetail.no5{
     background: url(../images/albumimg/5.jpg) no-repeat center/190%;
 }
-.albumdetail.no4::before{
+.albumdetail.no4{
     background: url(../images/albumimg/4.jpg) no-repeat center/190%;
 }
-.albumdetail.no3::before{
+.albumdetail.no3{
     background: url(../images/albumimg/3.jpg) no-repeat center/190%;
 }
-.albumdetail.no2::before{
+.albumdetail.no2{
     background: url(../images/albumimg/2.jpg) no-repeat center/190%;
 }
-.albumdetail.no1::before{
+.albumdetail.no1{
     background: url(../images/albumimg/1.jpg) no-repeat center/190%;
 }
 
@@ -569,7 +575,7 @@ body {
     transform: translateX(-50%);
     width: 1280px;
     max-width: 100%;
-   
+   overflow-x: hidden;
     z-index: 2;
     
 }
@@ -680,4 +686,4 @@ body {
 
 
 /*푸터*/
-.info{text-align: center; color:#969696; font-size: 11px; line-height: 25px; height: 1%;}
+.info{text-align: center; color:#969696; font-size: 10px; line-height: 25px; height: 1%;}

@@ -16,10 +16,12 @@ var winH = $(window).height();
 //////////////////////////////////////
 
 $(function () {
+
+    
     //스크롤로 화면 넘어가는거
     //맨 밑에서 top가기 버튼 누르고나서 스크롤하면 다시 아래로 내려감
     
-    $(document).on("mousewheel DOMMouseScroll", function (e) {
+ $(document).on("mousewheel DOMMouseScroll", function (e) {
 
 
         /////// 광스크롤막기 /////////////////
@@ -60,6 +62,7 @@ $(function () {
         $("img", this).fadeIn(900)
     });
     ///////////메인로고 사르르사라지기///////////
+
 
 
     var tg1 = $(".slide1")
@@ -119,11 +122,17 @@ $(function () {
         goslide3(0);
     }); /////////슬라이드설정/////////////////
 
+        //화살표 돌아가는거
+     var deg_temp =0;
     $(".track_plus").click(function () {
-        //화살표 돌아가는거 하고싶다
-        $(this).parent().next().slideToggle(function () {});
-
-    
+        $(this).parent().next().slideToggle();
+        
+        deg_temp = deg_temp+45;
+        
+        $(this).css({
+            'transform': 'rotate(' + deg_temp + 'deg)',
+        });
+        
     }); ////////신곡소개///////////////
 
     $(".menubtn").mouseenter(function () {
@@ -140,7 +149,7 @@ $(function () {
             width: "0%",
             transition: "all, .8s"
         });
-    }); ////////메뉴버튼 설정///////////가만히좀있게못하나....
+    }); ////////메뉴버튼 설정///////////
 
     //페이지 스르륵 내려가기//////////////////////////////////
     $(".nextpage a, #cont1 a, .mainlistlogo a, .m_mm_logo a, .arrowdw").click(function (e) {

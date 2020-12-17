@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="css/gridView.css">
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
+    <!--<script src="js/jquery.fullPage.min.js"></script>-->
     <script src="js/gfriend.js"></script>
     <style>
-        .grid {
+        /*.grid {
             width: 1280px;
-        }
+        }*/
 
     </style>
 </head>
@@ -29,7 +30,8 @@
                     <!--클릭하거나 스크롤 내렸을 시 2. 메인페이지로 스르륵 내려가기-->
                     <!--<video src="images/teaser.webm" id="teaservideo" autoplay muted loop></video>-->
                     <!--모바일에선 유튭동영상 자동재생 안된다!!!!!!!!!!!!!!!-->
-                    <iframe id="teaservideo" width="100%" height="100%" src="https://www.youtube.com/embed/kcOZ6PJ-M-c?autoplay=1&mute=1&start=10&end=128&iv_load_policy=3&showinfo=0&controls=0&rel=0&loop=1;playlist=kcOZ6PJ-M-c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><!--루프가 잘 되는지 모르겠다..-->
+                    <iframe id="teaservideo" width="100%" height="100%" src="https://www.youtube.com/embed/kcOZ6PJ-M-c?autoplay=1&mute=1&start=10&end=128&iv_load_policy=3&showinfo=0&controls=0&rel=0&loop=1;playlist=kcOZ6PJ-M-c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!--루프가 잘 되는지 모르겠다..-->
                     <div id="introtitle">
                         <h1>GFRIEND 9TH MINI ALBUM<br>
                             [<span class="titlehanza">回:</span> Song of the Sirens]<br>
@@ -39,7 +41,7 @@
                     <div class="nextpage"><a href="#cont2"><img src="images/arrowdown.png"></a></div>
                 </a>
             </div>
-            
+    
             <div class="mobileintro">
                 <a href="#cont2">
                     <div class="mobileint_bg">
@@ -50,23 +52,23 @@
         </section>
     </div>
     <!--2. 메인페이지-->
-    <div class="page cont2"  id="cont2">
+    <div class="page cont2" id="cont2">
         <section class="inbox3 clb">
-          <div class="col-12 c2h0"></div>
-           <div class="col-12 c2h0 m_mainmenu"><img src="images/menu3_white.png"></div>
-           <div class="m_mainmenu_box">
-               <ul class="m_mainmenu_list">
-                   <li class="m_mm_logo"><a href="#brkroom"><img src="images/gfriend_logo_small_white.png" alt="여자친구 미니9집 로고"></a></li>
-                   <li><a target="_blank" href="https://www.sourcemusic.com/ko/index.php?lang=ko">SOURCE MUSIC</a></li>
-                   <li><a href="aboutGFR.html">
-                        GFRIEND
-                    </a></li>
-                   <li><a href="news.html">
-                        NEWS
-                    </a></li>
-                   <li><a href="#">Shin HoJung</a></li>
-               </ul>
-           </div>
+            <div class="col-12 c2h0"></div>
+            <div class="col-12 c2h0 m_mainmenu"><img src="images/menu3_white.png"></div>
+            <div class="m_mainmenu_box">
+                <ul class="m_mainmenu_list">
+                    <li class="m_mm_logo"><a href="#brkroom"><img src="images/gfriend_logo_small_white.png" alt="여자친구 미니9집 로고"></a></li>
+                    <li><a target="_blank" href="https://www.sourcemusic.com/ko/index.php?lang=ko">SOURCE MUSIC</a></li>
+                    <li><a href="aboutGFR.html">
+                            GFRIEND
+                        </a></li>
+                    <li><a href="news.html">
+                            NEWS
+                        </a></li>
+                    <li><a href="https://signalorion.github.io/2020intro/">Shin HoJung</a></li>
+                </ul>
+            </div>
             <div class="col-12 c2h1">
                 <!--<video src="images/movie.webm" id="movie" autoplay muted loop></video>-->
                 <iframe id="movie" width="100%" height="100%" src="https://www.youtube.com/embed/XQSse3b2ge4?autoplay=1&mute=1&start=5&end=205&iv_load_policy=3&showinfo=0&controls=0&rel=0&loop=1;playlist=XQSse3b2ge4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -80,34 +82,35 @@
                 </div>
                 <div class="main_source_logo"><img src="images/source_logo_white.png"></div>
             </div>
-
+    
             <div class="mainmenu">
-                <div class="col-1 c2h2 mainlistlogo"><a href="#brkroom"><img src="images/gfriend_logo_small_white.png" alt="여자친구 미니9집 로고"></a></div><!--누르면 스크롤 징 되며 내려감-->
+                <div class="col-1 c2h2 mainlistlogo"><a href="#brkroom"><img src="images/gfriend_logo_small_white.png" alt="여자친구 미니9집 로고"></a></div>
+                <!--누르면 스크롤 징 되며 내려감-->
                 <div class="col-3 c2h2">
-                    <a target="_blank" href="https://www.sourcemusic.com/ko/index.php?lang=ko">
+                    <a target="_blank" href="https://www.sourcemusic.com/ko/index.php?lang=ko" title="쏘스뮤직 공식홈페이지 이동">
                         <h3>SOURCE MUSIC</h3>
                     </a>
                 </div>
-                <div class="col-3 c2h2"><a href="aboutGFR.html">
+                <div class="col-3 c2h2"><a href="aboutGFR.html" title="여자친구 소개">
                         <h3>GFRIEND</h3>
                     </a></div>
-                <div class="col-3 c2h2"><a href="news.html">
+                <div class="col-3 c2h2"><a href="news.html" title="여자친구 뉴스">
                         <h3>NEWS</h3>
                     </a></div>
-                <div class="col-2 c2h2"><a href="#">
+                <div class="col-2 c2h2" title="신호정의 자기소개 페이지 이동"><a href="https://signalorion.github.io/2020intro/">
                         <h3>Shin HoJung</h3>
                     </a></div>
             </div>
         </section>
-
+    
     </div>
     <!--3. 앨범컨셉 사진영역1-->
     <div class="page cont3 brkroom" id="brkroom">
         <section class="inbox clb">
             <div class="col-12 c3h1" id="concepttitle"><img src="images/this_title_black.png" alt="미니9집 타이틀이름"></div>
-
+    
             <div class="col-12 c3h2 conceptphoto">
-
+    
                 <ul class="slide1">
                     <li class="s1"><span class="ir">사진이미지</span><a href="#tilted" class="arrowdw nu1"><img src="images/arrowdown.png"></a></li>
                     <li class="s2"><span class="ir">사진이미지</span></li>
@@ -119,10 +122,10 @@
                 <!--                                <img src="images/18.Broken_Room_2.jpg" alt="컨셉사진" class="conceptimg">-->
                 <div class="img_arrow left"><img src="images/arrow_left_white.png"></div>
                 <div class="img_arrow right"><img src="images/arrow_right_white.png"></div>
-
-
+    
+    
             </div>
-
+    
             <div class="col-12 c3h3" id="concept_ver">
                 <ul class="concept_ver">
                     <li class="on underline"><a href="#brkroom">Broken Room</a></li>
@@ -132,19 +135,21 @@
                 </ul>
             </div>
         </section>
-
+    
     </div>
-
+    
     <!--3. 앨범컨셉 사진영역2-->
     <div class="page cont3 tilted" id="tilted">
         <section class="inbox clb">
-            <div class="col-12 c3h1" id="menubox"><img src="images/menu.png" alt="메뉴이동" class="menubtn"><div class="menu_hover">
+            <div class="col-12 c3h1" id="menubox"><img src="images/menu.png" alt="메뉴이동" class="menubtn">
+                <div class="menu_hover">
                     <ul class="menu_hover_ul">
                         <li><a href="#">MAIN</a></li>
                         <li><a href="aboutGFR.html">GFRIEND</a></li>
                         <li><a href="news.html">NEWS</a></li>
                     </ul>
-                </div></div>
+                </div>
+            </div>
             <div class="col-12 c3h2 conceptphoto">
                 <ul class="slide2">
                     <li class="s1"><span class="ir">사진이미지</span></li>
@@ -157,7 +162,7 @@
                     <li class="s8"><span class="ir">사진이미지</span></li>
                     <li class="s9"><span class="ir">사진이미지</span></li>
                 </ul>
-
+    
                 <div class="img_arrow left"><img src="images/arrow_left_white.png"></div>
                 <div class="img_arrow right"><img src="images/arrow_right_white.png"></div>
             </div>
@@ -170,9 +175,9 @@
                 </ul>
             </div>
         </section>
-
+    
     </div>
-
+    
     <!--3. 앨범컨셉 사진영역3-->
     <div class="page cont3 apple" id="apple">
         <section class="inbox clb">
@@ -196,7 +201,7 @@
                     <li class="s7"><span class="ir">사진이미지</span></li>
                     <li class="s8"><span class="ir">사진이미지</span></li>
                 </ul>
-
+    
                 <div class="img_arrow left"><img src="images/arrow_left_white.png"></div>
                 <div class="img_arrow right"><img src="images/arrow_right_white.png"></div>
             </div>
@@ -209,44 +214,48 @@
                 </ul>
             </div>
         </section>
-
+    
     </div>
-
+    
     <!--4. 앨범 소개 영역-->
     <div class="page cont4" id="intro_sos">
         <section id="cont4" class="inbox2 clb">
-            <div class="col-12 c4h0" id="menubox3"><img src="images/menu.png" alt="메뉴"  class="menubtn"><div class="menu_hover">
+            <div class="col-12 c4h0" id="menubox3"><img src="images/menu.png" alt="메뉴" class="menubtn">
+                <div class="menu_hover">
                     <ul class="menu_hover_ul">
                         <li><a href="#">MAIN</a></li>
                         <li><a href="aboutGFR.html">GFRIEND</a></li>
                         <li><a href="news.html">NEWS</a></li>
                     </ul>
-                </div></div>
-            <div class="col-5 c4h1 cont4albumimg_box"><div class="cont4albumimg"></div></div>
+                </div>
+            </div>
+            <div class="col-5 c4h1 cont4albumimg_box">
+                <div class="cont4albumimg"></div>
+            </div>
             <div class="col-7 c4h1 cont4texts">
                 <div class="this_albumintro">
                     <b>여자친구는 [回:Song fo the Sirens]에서 유혹 앞에 흔들리는 소녀의 이야기를 전한다.<br>
                         자신의 선택에 대가가 따른다는 것을 알게 된 소녀는 자신을 유혹하는 목소리에 귀를 기울인다.</b><span class="this_intro1">변화의 선봉에 선 타이틀곡 'Apple'은 지금까지 여자친구가 보여준 음악 스타일과 확연히 다르다. <br>
                         '파워 청순', '격정 아련' 등의 수식어로 설명됐던 여자친구는 그와는 상반되는 '청량 마녀'로 파격 변신했다.
                         이를 통해 욕망에 솔직하고 당당한 여성의 모습을 표현했다.<br></span>
-
+    
                     <div class="this_intro2">여자친구는 '回:Song of the Sirens'의 곡 작업 전반에 참여하며 음악적 변화와 성장을 꾀했다.<br>
                         은하와 유주가 각각 타이틀곡 'Apple'의 작사와 작곡에, 유주와 엄지가 '눈의 시간'과 'Tarot Cards'의 작사에 참여했다.
                         2020년 7월 13일 오후 6시 전곡 음원을 공개한다.</div>
-
+    
                     <ul class="this_links">
                         <li><a target=_blank href="https://www.genie.co.kr/detail/albumInfo?axnm=81501151">주요 음원사이트 바로가기</a></li>
                         <li><a target=_blank href="https://youtu.be/XQSse3b2ge4">뮤직비디오 바로가기</a></li>
                     </ul>
                 </div>
-
+    
             </div>
             <div class="col-11 c4h2" id="cont4_tracklist">
                 <h2>Track List</h2>
                 <ul class="tracklist_ul">
                     <li>
                         <span class="tracklist_tit no1">
-                            <small>Title</small>Apple<b>03:27</b><img src="images/plus_btn_333.png"  class="track_plus no1">
+                            <small>Title</small>Apple<b>03:27</b><img src="images/plus_btn_333.png" class="track_plus no1">
                         </span>
                         <div class="trackintro no1">
                             아르페지오(Arpeggio) 기타 연주와 8분의 6박자의 셔플 그루브(Shuffle Groove) 기반의 슬랩 베이스(Slap Bass), 90년대 향수를 느낄 수 있는 PCM 신스(Pulse Code Modulation Synth), 트렌디한 느낌의 보컬 찹(Vocal Chops)이 절묘하게 어우러진 팝(Pop) 장르의 곡이다. 과거와 현재를 아우르는 사운드로 새롭고 신비로운 분위기를 자아낸다. 은하가 작사 및 작곡, 유주가 작곡에 참여한 것을 비롯해 여섯 멤버의 매혹적인 보이스가 느껴지는 새로운 음악적 시도가 엿보이는 곡이다.
@@ -254,7 +263,7 @@
                     </li>
                     <li>
                         <span class="tracklist_tit no2">
-                            눈의 시간<b>03:41</b><img src="images/plus_btn_333.png"  class="track_plus no2">
+                            눈의 시간<b>03:41</b><img src="images/plus_btn_333.png" class="track_plus no2">
                         </span>
                         <div class="trackintro no2">
                             유주와 엄지가 작사에 참여한, 록(Rock) 리듬 기반의 댄스(Dance) 장르의 곡이다. 태풍 속에 있을 때, 오히려 태풍의 한가운데인 눈으로 들어가 태풍에 휩쓸리지 않고 자신을 찾아간다는 내용을 가사에 담았다. 드럼 앤 베이스(Drum&Bass)를 비롯한 다양한 전자 음악(Electronic Music)에 서정적인 피아노의 선율이 더해져 트렌디하면서도 감성적인 멜로디를 선사한다. 록(Rock) 리듬과 다양한 신스(Synth), 피아노 선율이 모여 만든 강렬하지만 섬세한 느낌의 사운드는 태풍의 시작과 변화, 고요한 순간을 그려내며 세련된 곡의 분위기를 배가시킨다.
@@ -262,7 +271,7 @@
                     </li>
                     <li>
                         <span class="tracklist_tit no3">
-                            거울의 방<b>03:28</b><img src="images/plus_btn_333.png"  class="track_plus no3">
+                            거울의 방<b>03:28</b><img src="images/plus_btn_333.png" class="track_plus no3">
                         </span>
                         <div class="trackintro no3">
                             나는 초라해보이고 다른 사람들은 잘 나고 예쁘게 보이는 거울, 시기와 질투를 부추기며 다른 사람들과 끊임없이 비교하게 만드는 세상을 거울의 방으로 비유했다. 신스 드럼(Synth Drum)과 신스 베이스(Synth Bass) 위에 화려한 현악 오케스트라와 피아노가 조화를 이루는 미디엄 템포의 발라드 곡으로, 여자친구만의 벅차오르는 서정적 분위기를 느낄 수 있다. 혼란스러운 감정을 애절한 보이스로 표현하여 한층 성숙해진 여자친구의 보컬이 돋보인다.
@@ -270,7 +279,7 @@
                     </li>
                     <li>
                         <span class="tracklist_tit no4">
-                            Tarot Cards<b>03:16</b><img src="images/plus_btn_333.png"  class="track_plus no4">
+                            Tarot Cards<b>03:16</b><img src="images/plus_btn_333.png" class="track_plus no4">
                         </span>
                         <div class="trackintro no4">
                             은하와 유주, 엄지가 작사에 참여한 곡으로, 스스로 고민하고 방향을 찾기보다는 답이 정해진 쉬운 길로 가고 싶은 순간을 노래한다. 이미 정해져 있는 운명처럼 자신의 선택을 누군가 대신해 주었으면 하는 마음을 타로 카드(Tarot Cards)를 보는 행위로 표현했다. 얼터너티브 록(Alternative Rock)을 기반으로 스트링(String)과 신스(Synth)의 악기가 어우러진 록(Rock)과 댄스(Dance) 장르 사이에 묘한 간극이 매력적인 곡이다. 기존에 보여주었던 청량하고 에너지 넘치는 사운드와 보컬을 그대로 유지하면서도 팝적인 요소가 가미되어 친숙함과 새로운 느낌을 동시에 받을 수 있다.
@@ -280,7 +289,7 @@
                         <span class="tracklist_tit no5">
                             Crème Brûlée<b>03:18</b><img src="images/plus_btn_333.png" class="track_plus no5">
                         </span>
-                
+    
                         <div class="trackintro no5">
                             부드러운 느낌의 건반 리프(Riff)와 듣기 쉬운 멜로디가 노래 제목처럼 달콤한 분위기를 자아내는 미디엄 템포의 팝(Pop) 장르의 곡이다. 달콤한 냄새를 풍기지만 다가가면 단단하게 닫혀있는 유혹적인 상황을 커스터드 크림 위에 설탕을 얹고 표면에 열을 가해 딱딱한 설탕막을 씌운 디저트인 크렘 브륄레(Creme Brulee)에 비유한 가사가 인상적이다. 여자친구 특유의 섬세하면서도 통통 튀는 상큼한 느낌의 보컬과 만나 재미있으면서 중독성 강한 후렴구가 귀를 사로잡는다.
                         </div>
@@ -294,35 +303,20 @@
                         </div>
                     </li>
                 </ul>
-                
+    
             </div>
-            
-
-
+    
+    
+    
             <div class="col-1 c4h2 up_arrow">
                 <a href="#cont2"><img src="images/up_arrow_white.png"><span>MAIN PAGE</span></a>
             </div>
         </section>
         <div class="info">(주)쏘스뮤직 Copyright© 2019 SOURCE MUSIC Co.Ltd. All rights reserved.</div>
-
+    
     </div>
-
+    
     <!--쏘스뮤직, 멤버들, 오디션은 아예 다른 창의 영역으로 만들기-->
-
-    <ul class="grid">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
 </body>
 
 </html>

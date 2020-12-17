@@ -185,7 +185,7 @@
 
     /*.m_mainmenu_box{display: none;}*/
     .m_mainmenu_box {
-        width: 50%;
+        width: 65%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.7);
         position: absolute;
@@ -213,7 +213,7 @@
 
     .m_mainmenu_list a {
         color: white;
-        font-size: 25px;
+        font-size: 5vw;
     }
 
     /*3. 컨셉타이틀*/
