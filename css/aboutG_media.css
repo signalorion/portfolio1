@@ -193,7 +193,7 @@
         text-align: center;
     }
     /*3-1. 앨범상세페이지*/
-    #album_track {
+    .album_tracklist {
         width: 60%;}
     .album_track {
     width: 85%;
@@ -256,7 +256,7 @@
 /*앨범클릭시*/
 .albuminfo_img {
     width: 75%;}
-#album_track {
+.album_tracklist {
     width: 100%;
 }
 .tracklist_ul {

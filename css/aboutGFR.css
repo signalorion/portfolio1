@@ -613,7 +613,7 @@ body {
 }
 
 /*트랙리스트*/
-#album_track {
+.album_tracklist {
     width: 58%;
     float: right;
 }
